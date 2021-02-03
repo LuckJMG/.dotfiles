@@ -1,0 +1,15 @@
+[user]
+	name = LuckJMG
+	email = lucas.mosquera13@gmail.com
+[core]
+	editor = code --wait
+	excludesfile = /home/luck/.gitignore_global
+	filemode = false
+	autocrlf = input
+	symlinks = true
+[init]
+	defaultBranch = main
+[color]
+	ui = always
+[credential]
+	helper = /mnt/c/Program\\ Files/Git/mingw64/libexec/git-core/git-credential-manager.exe
