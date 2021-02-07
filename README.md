@@ -1,8 +1,8 @@
 # Config Files
 
-![GitHub](https://img.shields.io/github/license/LuckJMG/Config-Files)
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg)](https://github.com/RichardLitt/standard-readme)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
+![GitHub](https://img.shields.io/github/license/LuckJMG/Config-Files)
 ![GitHub repo size](https://img.shields.io/github/repo-size/LuckJMG/Config-Files)
 
 All my config files of my workspace, for auto-backup and auto-configure in new environments.
@@ -39,6 +39,7 @@ I really appreciate that you have come this far, thank you very much, for me, a 
 ## Contributing
 
 You can ask question of the project posting an issue.
+
 PRs for auto-backup and auto-update accepted.
 
 Read the [CONTRIBUTING](CONTRIBUTING.md) to view how to contribute to the project in the best way for the community.
