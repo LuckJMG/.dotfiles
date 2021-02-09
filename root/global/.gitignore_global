@@ -1,0 +1,13 @@
+[General]
+.vs_code
+.husky
+commitlint.config.js
+package-lock.json
+package.json
+
+[Python]
+.pytest_cache
+.venv
+
+[JS]
+node_modules
