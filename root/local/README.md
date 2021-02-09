@@ -31,7 +31,6 @@ If any of the folder, repository, or package manager names do not match, there m
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg)](https://github.com/RichardLitt/standard-readme)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 ![GitHub](https://img.shields.io/github/license/LuckJMG/Config-Files)
-![GitHub repo size](https://img.shields.io/github/repo-size/LuckJMG/Config-Files)
 
 **Status:** Optional.
 
