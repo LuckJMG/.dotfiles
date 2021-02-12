@@ -41,7 +41,7 @@ If any of the folder, repository, or package manager names do not match, there m
 
 **Suggestions:**
 
-- Use http://shields.io or a similar service to create and host the images.
+- Use [shields.io](http://shields.io) or a similar service to create and host the images.
 - Add the [Standard Readme badge](https://github.com/RichardLitt/standard-readme#badge).
 
 ***Short Description***
@@ -52,7 +52,7 @@ If any of the folder, repository, or package manager names do not match, there m
 
 - Must not have its own title.
 - Must be less than 120 characters.
-- Must not start with `> `
+- Must not start with ` > `
 - Must be on its own line.
 - Must match the description in the packager manager's `description` field.
 - Must match GitHub's description (if on GitHub).
