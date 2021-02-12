@@ -1,5 +1,5 @@
 [General]
-.vs_code
+.vscode
 .husky
 commitlint.config.js
 package-lock.json
