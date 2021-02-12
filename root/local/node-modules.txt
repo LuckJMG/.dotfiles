@@ -11,7 +11,11 @@ npx husky install
 [Commitlint]
 npm install --save-dev @commitlint/{config-conventional,cli}
 echo "module.exports = {extends: ['@commitlint/config-conventional']}" > commitlint.config.js
-npx --no-install commitlint --edit $1
+"husky": {
+  "hooks": {
+    "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+  }
+}
 
 [Standard version]
 npm i --save-dev standard-version
