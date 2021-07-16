@@ -1,6 +1,0 @@
-Standard conventions on all my projects:
-
-Standard README
-Standard Github Labels
-Standard Version | Semver
-Conventional Commits
