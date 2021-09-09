@@ -1,0 +1,12 @@
+[user]
+	name = LuckJMG
+	email = 25126199+LuckJMG@users.noreply.github.com
+
+[core]
+	editor = code --wait
+
+[init]
+	defaultBranch = main
+
+[color]
+	ui = always
