@@ -2,7 +2,7 @@
 
 My workspace backup of windows wsl2.
 
-This repository is for backup my workspace that includes dotfiles (`.zshrc`, `.npmrc`, `gitconfig`, etc.) and apps (`zsh`, `git`, `node`, etc.) of windows wsl2, apart of that is neccesary other apps pre-installed in windows that I will specify later.
+This repository is for backup my workspace that includes dotfiles (`.zshrc`, `.npmrc`, `.gitconfig`, etc.) and apps (`zsh`, `git`, `node`, etc.) of windows wsl2, apart of that is neccesary other apps pre-installed in windows that I will specify later.
 
 ## Table of Contents
 
