@@ -31,6 +31,8 @@ Then execute `install.sh` to install and configure everything else:
 ./.dotfiles/install.sh
 ```
 
+Remember to update the Brewfile every time the app list is edited.
+
 ### Dependencies
 
 Before installing the .dotfiles repo first you need to be in windows and install these things:
