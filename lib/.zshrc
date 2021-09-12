@@ -23,7 +23,7 @@ plugins=(git)
 . /home/linuxbrew/.linuxbrew/etc/profile.d/z.sh
 source ~/.oh-my-zsh/oh-my-zsh.sh
 source /home/linuxbrew/.linuxbrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/apps/zsh-syntax-dracula/zsh-syntax-highlighting.sh
+source ~/packages/zsh-syntax-dracula/zsh-syntax-highlighting.sh
 source /home/linuxbrew/.linuxbrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # User configuration
@@ -61,5 +61,6 @@ alias dotfiles="code ~/.dotfiles"
 ### Shortcuts
 alias del="rm -rf"
 
-### Apps
-alias newrepo="~/apps/newrepo/src/main.sh"
+### Packages
+alias release="standard-version"
+alias newrepo="~/packages/newrepo/src/main.sh"
