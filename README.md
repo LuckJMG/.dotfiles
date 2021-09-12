@@ -1,39 +1,44 @@
-# Config Files
+# .dotfiles
 
-[![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg)](https://github.com/RichardLitt/standard-readme)
-[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
-![GitHub](https://img.shields.io/github/license/LuckJMG/Config-Files)
-![GitHub repo size](https://img.shields.io/github/repo-size/LuckJMG/Config-Files)
+My workspace backup of windows wsl2.
 
-All my config files of my workspace for backup and globalize my configuration between my tools and computers.
-
-This repository is for backup my configuration of all the tools that I use in programming, this includes: git, github, editorconfig, zsh and vscode. And globalize this configs between my tools and computers.
+This repository is for backup my workspace that includes dotfiles (`.zshrc`, `.npmrc`, `gitconfig`, etc.) and apps (`zsh`, `git`, `node`, etc.) of windows wsl2, apart of that is neccesary other apps pre-installed in windows that I will specify later.
 
 ## Table of Contents
 
-- [Config Files](#config-files)
+- [.dotfiles](#dotfiles)
   - [Table of Contents](#table-of-contents)
   - [Background](#background)
+  - [Install](#install)
+    - [Dependencies](#dependencies)
   - [Thanks](#thanks)
-  - [Contributing](#contributing)
-  - [License](#license)
 
 ## Background
 
-I am an student from Chile of 17 years at this moment, I started programming at the age of 12 and from that moment I fell in love with the programming. This repository is for help me to facilitate my learning of programming and more important a self imposed challenge to improve my skills and expand my briefcase in the future, with this project I will learn to programming in bash script, to configure git hooks and to automatize the edition of files.
+I am an student from Chile of 18 years at this moment, I started programming at the age of 12 and from that moment I fell in love with the programming. The idea of this repository came to me when I saw a video of fireship called [~/.dotfiles in 100 seconds](https://www.youtube.com/watch?v=r_MpUP6aKiQ), then I started this project. First it was the dotfiles and the standard files that I normally use in a project but then I separed them in 2 projects, this and [newrepo](https://github.com/LuckJMG/newrepo).
+
+## Install
+
+To install and configure your new enviroment first you need to clone this repo in `~`:
+
+``` bash
+git clone https://github.com/LuckJMG/.dotfiles.git
+```
+
+Then execute `install.sh` to install and configure everything else:
+
+``` bash
+./.dotfiles/install.sh
+```
+
+### Dependencies
+
+Before installing the .dotfiles repo first you need to be in windows and install these things:
+
+- [VS Code](https://code.visualstudio.com/) (with the [settings sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) extension)
+- [Windows Terminal](https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701?activetab=pivot:overviewtab)
+- [wsl2](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
 
 ## Thanks
 
 I really appreciate that you have come this far, thank you very much, for me, a 17 years old student, that someone viewed his project is a very large achievement, and I hope that my code can be useful to you.
-
-## Contributing
-
-You can ask question of the project posting an issue.
-
-PRs for recommendations or optimizations for my config files.
-
-Read the [CONTRIBUTING](CONTRIBUTING.md) to view how to contribute to the project in the best way for the community.
-
-## License
-
-[MIT © LuckJMG](LICENSE)

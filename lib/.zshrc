@@ -2,12 +2,11 @@
 
 # Start
 if [ "$PWD" = "/mnt/c/Users/Luck" ]; then
-  cd ~ || exit
+    cd ~ || exit
 fi
 
 # Zsh configuration
 ## Export paths
-export ZSH="/home/luck/.oh-my-zsh"
 export NVM_DIR="$HOME/.nvm"
 
 ## App config
@@ -22,7 +21,7 @@ CASE_SENSITIVE="true"
 ## Plugins
 plugins=(git)
 . /home/linuxbrew/.linuxbrew/etc/profile.d/z.sh
-source $ZSH/oh-my-zsh.sh
+source ~/.oh-my-zsh/oh-my-zsh.sh
 source /home/linuxbrew/.linuxbrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/apps/zsh-syntax-dracula/zsh-syntax-highlighting.sh
 source /home/linuxbrew/.linuxbrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
