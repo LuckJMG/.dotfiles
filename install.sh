@@ -12,13 +12,12 @@ nvm install --lts
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Delete original files
-rm -rf .zshrc .npmrc .gitconfig .vscode .gitignore_global
+rm -rf .zshrc .npmrc .gitconfig .gitignore_global
 
 # Create symbolic links
 ln -s "$LIB_PATH"/.zshrc ~/.zshrc
 ln -s "$LIB_PATH"/.npmrc ~/.npmrc
 ln -s "$LIB_PATH"/.gitconfig ~/.gitconfig
-ln -s "$LIB_PATH"/.vscode ~/.vscode
 ln -s "$LIB_PATH"/.gitignore_global ~/.gitignore_global
 
 # Create folders
