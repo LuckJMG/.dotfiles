@@ -9,6 +9,7 @@ cd ~ || exit
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 "$LIB_PATH"/Brewfile
 nvm install --lts
+chsh -s /bin/zsh  # Set zsh as default shell
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Delete original files
