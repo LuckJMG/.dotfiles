@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/usr/bin/env bash
 
 LIB_PATH="$(dirname "$0")/lib"
 
