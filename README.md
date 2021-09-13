@@ -42,7 +42,7 @@ ls -al ~/.ssh
 
 # If there aren't any available keys create a new one
 ssh-keygen -t ed25519 -C "25126199+LuckJMG@users.noreply.github.com" # Replace with your email
-# Press enter and type a passphrase
+# Press enter and when it ask for a passphrase press enter again
 
 # Start the ssh-agent
 eval "$(ssh-agent -s)"
