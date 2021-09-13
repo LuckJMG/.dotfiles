@@ -5,20 +5,22 @@ if [ "$PWD" = "/mnt/c/Users/Luck" ]; then
     cd ~ || exit
 fi
 
-# Zsh configuration
-## Export paths
+# Export paths
+export LANG=en_US.UTF-8
+export EDITOR="code"
 export NVM_DIR="$HOME/.nvm"
 
-## App config
-### nvm
-[ -s "/home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh" ] && . "/home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/home/linuxbrew/.linuxbrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/home/linuxbrew/.linuxbrew/opt/nvm/etc/bash_completion.d/nvm"
-
-## Options
+# Options
 ZSH_THEME="dracula"
 CASE_SENSITIVE="true"
 
-## Plugins
+# Packages config
+## nvm
+[ -s "/home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh" ] && . "/home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/home/linuxbrew/.linuxbrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/home/linuxbrew/.linuxbrew/opt/nvm/etc/bash_completion.d/nvm"
+
+
+# Plugins
 plugins=(git)
 . /home/linuxbrew/.linuxbrew/etc/profile.d/z.sh
 source ~/.oh-my-zsh/oh-my-zsh.sh
@@ -26,13 +28,7 @@ source /home/linuxbrew/.linuxbrew/share/zsh-syntax-highlighting/zsh-syntax-highl
 source ~/packages/zsh-syntax-dracula/zsh-syntax-highlighting.sh
 source /home/linuxbrew/.linuxbrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# User configuration
-## Options
-export LANG=en_US.UTF-8
-export EDITOR="code"
-
-## Functions
-### Shortcuts
+# Functions
 function reset() {
     if [ -n "$1" ]; then
         cd ..
@@ -44,23 +40,23 @@ function reset() {
     fi
 }
 
-## Aliases
-### Paths
-#### Files
+# Aliases
+## Packages
+alias release="standard-version"
+alias newrepo="~/packages/newrepo/src/main.sh"
+
+## Shortcuts
+alias del="rm -rf"
+
+## Paths
+### Files
 alias zshrc="code ~/.zshrc"
 alias npmrc="code ~/.npmrc"
 alias gitconfig="code ~/.gitconfig"
 
-#### Folders
+### Folders
 alias apps="cd ~/apps"
 alias projects="cd ~/projects"
 alias tests="cd ~/tests"
-alias ohmyzsh="code ~/.oh-my-zsh"
-alias dotfiles="code ~/.dotfiles"
-
-### Shortcuts
-alias del="rm -rf"
-
-### Packages
-alias release="standard-version"
-alias newrepo="~/packages/newrepo/src/main.sh"
+alias ohmyzsh="cd ~/.oh-my-zsh"
+alias dotfiles="cd ~/.dotfiles | code ~/.dotfiles"
