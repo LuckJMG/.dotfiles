@@ -33,7 +33,6 @@ ln -s "$LIB_PATH"/.gitignore_global ~/.gitignore_global
 # Node
 ## Install node lts version
 nvm install --lts
-nvm use node
 
 ## Install node packages
 npm install --global standard-version husky @commitlint/{config-conventional,cli}
