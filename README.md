@@ -69,10 +69,10 @@ For more information go to the [github SSH documentation](https://docs.github.co
 
 Before installing the .dotfiles repo first you need to be in windows and install these things:
 
+- [Fira Code Font](https://github.com/tonsky/FiraCode)
 - [VS Code](https://code.visualstudio.com/) (with the [settings sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) extension)
 - [Windows Terminal](https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701?activetab=pivot:overviewtab)
 - [wsl2](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
-- [Fira Code Font](https://github.com/tonsky/FiraCode)
 
 ## Thanks
 
