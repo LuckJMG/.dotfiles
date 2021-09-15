@@ -11,7 +11,6 @@ This repository is for backup my workspace that includes dotfiles (`.zshrc`, `.n
   - [Background](#background)
   - [Install](#install)
     - [Connect to GitHub](#connect-to-github)
-    - [Dependencies](#dependencies)
   - [Thanks](#thanks)
 
 ## Background
@@ -64,15 +63,6 @@ ssh -T git@github.com
 ```
 
 For more information go to the [github SSH documentation](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh).
-
-### Dependencies
-
-Before installing the .dotfiles repo first you need to be in windows and install these things:
-
-- [Fira Code Font](https://github.com/tonsky/FiraCode)
-- [VS Code](https://code.visualstudio.com/) (with the [settings sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) extension)
-- [Windows Terminal](https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701?activetab=pivot:overviewtab)
-- [wsl2](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
 
 ## Thanks
 

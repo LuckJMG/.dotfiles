@@ -9,26 +9,27 @@ cd ~ || exit
 ## Create folders
 mkdir apps packages tests
 
-# Homebrew
-## Install Homebrew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-## Install packages
-"$LIB_PATH"/Brewfile
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-## Configure brew packages
-chsh -s /bin/zsh  # Set zsh as default shell
-
 # Dotfiles
 ## Delete original files
 rm -rf .zshrc .npmrc .gitconfig .gitignore_global
 
 ## Create symbolic links
-ln -s "$LIB_PATH"/.zshrc ~/.zshrc
-ln -s "$LIB_PATH"/.npmrc ~/.npmrc
+ln -s "$LIB_PATH"/.Brewfile ~/.Brewfile
 ln -s "$LIB_PATH"/.gitconfig ~/.gitconfig
 ln -s "$LIB_PATH"/.gitignore_global ~/.gitignore_global
+ln -s "$LIB_PATH"/.npmrc ~/.npmrc
+ln -s "$LIB_PATH"/.zshrc ~/.zshrc
+
+# Homebrew
+## Install Homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+## Install packages
+brew bundle --global
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+## Configure brew packages
+chsh -s /bin/zsh  # Set zsh as default shell
 
 # Node
 ## Install node lts version
