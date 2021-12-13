@@ -1,0 +1,68 @@
+#!/usr/bin/env bash
+
+LIB_PATH="$(dirname "$0")/lib"
+
+# Home
+## Start at home
+cd ~ || exit
+
+## Delete original files
+rm -rf .Brewfile .zshrc .npmrc .gitconfig .gitignore_global .bashrc .profile
+
+## Create folders
+mkdir packages projects tests
+
+## Update current environment
+apt update
+apt upgrade
+
+## Install dependencies
+apt install -y curl nano git zsh build-essential
+
+
+# Git
+## Create symbolic links
+ln -s "$LIB_PATH"/.gitconfig ~/.gitconfig
+ln -s "$LIB_PATH"/.gitignore_global ~/.gitignore_global
+
+## Clone git packages
+git clone https://github.com/dracula/zsh.git ~/packages/zsh-dracula
+git clone https://github.com/dracula/zsh-syntax-highlighting.git ~/packages/zsh-syntax-dracula
+git clone https://github.com/LuckJMG/newrepo.git ~/packages/newrepo
+
+
+# Node
+## Install nvm
+ln -s "$LIB_PATH"/.npmrc ~/.npmrc
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+## Install node latest version
+nvm install node
+
+## Install node packages
+npm install --global standard-version husky @commitlint/{config-conventional,cli} npm
+
+## Configure node packages
+echo "module.exports = {extends: ['@commitlint/config-conventional']}" > commitlint.config.js
+
+
+# Homebrew
+## Create symbolic link
+ln -s "$LIB_PATH"/.Brewfile ~/.Brewfile
+
+## Install Homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+## Next steps
+echo "eval '$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)'" >> ~/.zprofile
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+## Install packages
+brew bundle --global
+
+
+# Zsh
+## Install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
