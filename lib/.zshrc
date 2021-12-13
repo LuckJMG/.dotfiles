@@ -39,6 +39,16 @@ function reset() {
         echo "Folder name required"
     fi
 }
+function update() {
+  sudo apt update
+  sudo apt upgrade
+  brew update
+  brew upgrade
+  nvm deactivate
+  nvm uninstall node
+  nvm install node
+  npm install --global standard-version husky @commitlint/{config-conventional,cli} npm
+}
 
 # Aliases
 ## Packages
