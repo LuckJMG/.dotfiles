@@ -2,15 +2,16 @@
 
 LIB_PATH="$(dirname "$0")/lib"
 
-# Execute at home
+# Post oh-my-zsh
+## Start at home directory
 cd ~ || exit
 
-# Set Dracula Theme
+## Set Dracula Theme
 mv ~/packages/zsh-dracula/dracula.zsh-theme ~/.oh-my-zsh/themes/dracula.zsh-theme
 mv ~/packages/zsh-dracula/lib ~/.oh-my-zsh/themes/lib
 ln -s ~/.oh-my-zsh/themes/dracula.zsh-theme ~/packages/zsh-dracula/dracula.zsh-theme
 
-# Restart zsh
+## Configure zsh
 rm -rf ~/.zshrc
 ln -s "$LIB_PATH"/.zshrc ~/.zshrc
 zsh
