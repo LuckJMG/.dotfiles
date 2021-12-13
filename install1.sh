@@ -5,7 +5,7 @@ LIB_PATH="$(dirname "$0")/lib"
 # Home
 cd ~ || exit
 
-## Files and Folders
+## Files and folders
 rm -rf .Brewfile .zshrc .npmrc .gitconfig .gitignore_global .bashrc .profile
 ln -s "$LIB_PATH"/.gitconfig ~/.gitconfig
 ln -s "$LIB_PATH"/.gitignore_global ~/.gitignore_global
