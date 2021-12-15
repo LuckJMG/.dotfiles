@@ -14,10 +14,9 @@ ln -s "$LIB_PATH"/.Brewfile ~/.Brewfile
 mkdir packages projects tests
 
 ## Update system
-apt update
-apt upgrade
-apt install -y curl nano git zsh build-essential
-
+sudo apt update
+sudo apt upgrade
+sudo apt install -y curl nano git zsh build-essential
 
 # Git
 ## Packages
@@ -50,3 +49,4 @@ brew bundle --global
 
 # Oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+#* execute install2.sh
