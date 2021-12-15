@@ -41,9 +41,11 @@ function reset() {
 }
 function update() {
   sudo apt update
-  sudo apt upgrade
+  sudo apt -y upgrade
+  sudo apt autoclean
   brew update
   brew upgrade
+  brew cleanup
   nvm deactivate
   nvm uninstall node
   nvm install node
@@ -52,6 +54,7 @@ function update() {
 
 # Aliases
 ## Packages
+alias bat="batcat"
 alias release="standard-version"
 alias newrepo="~/packages/newrepo/src/main.sh"
 
