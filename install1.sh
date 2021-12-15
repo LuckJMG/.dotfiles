@@ -17,6 +17,7 @@ mkdir packages projects tests
 sudo apt update
 sudo apt upgrade
 sudo apt install -y curl nano git zsh build-essential
+sudo apt autoclean
 
 # Git
 ## Packages
@@ -45,6 +46,7 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 ## Install packages
 brew bundle --global
+brew autoclean
 
 
 # Oh-my-zsh
