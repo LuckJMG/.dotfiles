@@ -10,8 +10,12 @@ cd ~ || exit
 mv ~/packages/zsh-dracula/dracula.zsh-theme ~/.oh-my-zsh/themes/dracula.zsh-theme
 mv ~/packages/zsh-dracula/lib ~/.oh-my-zsh/themes/lib
 
-## Configure zsh
+## Cleanup
 rm -rf ~/.zshrc ~/packages/zsh-dracula ~/packages/micro-dracula
+sudo apt autoclean
+brew cleanup
+
+## Configure zsh
 setopt autocd
 ln -s "$LIB_PATH"/.zshrc ~/.zshrc
 zsh
