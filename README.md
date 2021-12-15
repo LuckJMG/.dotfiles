@@ -15,7 +15,7 @@ This repository is for backup my personal workspace that includes configuration 
 - [Docker](https://www.docker.com/) for encapsulation and testing.
 - [Nvm](https://github.com/nvm-sh/nvm) for node management.
 - [Node](https://nodejs.org/en/) for project dependencies ([standard-version](https://github.com/conventional-changelog/standard-version), [husky](https://github.com/typicode/husky) and [commitlint](https://commitlint.js.org/#/)).
-- [Homebrew](https://brew.sh/) for package management ([curl](https://curl.se/), [bat](https://github.com/sharkdp/bat) and [nano](https://www.nano-editor.org/)).
+- [Homebrew](https://brew.sh/) for package management ([curl](https://curl.se/), [bat](https://github.com/sharkdp/bat) and [micro](https://micro-editor.github.io/)).
 - [Dracula Theme](https://draculatheme.com/) as main theme of all the workspace.
 - [Fira Code](https://github.com/tonsky/FiraCode) as main font of all the workspace.
 

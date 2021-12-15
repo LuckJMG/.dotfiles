@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 tap "homebrew/bundle"
 tap "homebrew/core"
 # Clone of cat(1) with syntax highlighting and Git integration
@@ -8,8 +6,8 @@ brew "bat"
 brew "curl"
 # Distributed revision control system
 brew "git"
-# Free (GNU) replacement for the Pico text editor
-brew "nano"
+# Modern and intuitive terminal-based text editor
+brew "micro"
 # Tracks most-used directories to make cd smarter
 brew "z"
 # UNIX shell (command interpreter)

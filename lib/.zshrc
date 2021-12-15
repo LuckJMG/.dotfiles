@@ -9,6 +9,7 @@ fi
 export LANG=en_US.UTF-8
 export EDITOR="code"
 export NVM_DIR="$HOME/.nvm"
+export MICRO_TRUECOLOR=1
 
 # Options
 ZSH_THEME="dracula"
@@ -68,7 +69,7 @@ alias npmrc="code ~/.npmrc"
 alias gitconfig="code ~/.gitconfig"
 
 ### Folders
-alias apps="cd ~/apps"
+alias packages="cd ~/packages"
 alias projects="cd ~/projects"
 alias tests="cd ~/tests"
 alias ohmyzsh="cd ~/.oh-my-zsh"
