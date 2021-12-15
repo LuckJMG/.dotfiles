@@ -9,9 +9,9 @@ cd ~ || exit
 ## Set Dracula Theme
 mv ~/packages/zsh-dracula/dracula.zsh-theme ~/.oh-my-zsh/themes/dracula.zsh-theme
 mv ~/packages/zsh-dracula/lib ~/.oh-my-zsh/themes/lib
-ln -s ~/.oh-my-zsh/themes/dracula.zsh-theme ~/packages/zsh-dracula/dracula.zsh-theme
 
 ## Configure zsh
-rm -rf ~/.zshrc
+rm -rf ~/.zshrc ~/packages/zsh-dracula ~/packages/micro-dracula
+setopt autocd
 ln -s "$LIB_PATH"/.zshrc ~/.zshrc
 zsh

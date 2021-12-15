@@ -16,13 +16,14 @@ mkdir packages projects tests
 ## Update system
 sudo apt update
 sudo apt upgrade
-sudo apt install -y curl nano bat git zsh build-essential
+sudo apt install -y curl micro bat git zsh build-essential
 sudo apt autoclean
 
 # Git
 ## Packages
 git clone https://github.com/dracula/zsh.git ~/packages/zsh-dracula
 git clone https://github.com/dracula/zsh-syntax-highlighting.git ~/packages/zsh-syntax-dracula
+git clone https://github.com/dracula/micro.git ~/packages/micro-dracula
 git clone https://github.com/LuckJMG/newrepo.git ~/packages/newrepo
 
 
@@ -47,6 +48,11 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 ## Install packages
 brew bundle --global
 brew autoclean
+
+## Configure packages
+mkdir ~/.config/micro/colorschemes
+mv ~/packages/micro-dracula/dracula.micro ~/.config/micro/colorschemes/dracula.micro
+printf "{\n    \"colorscheme\": \"dracula\"\n}" >> settings.json
 
 
 # Oh-my-zsh
