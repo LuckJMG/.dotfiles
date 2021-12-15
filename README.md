@@ -27,6 +27,7 @@ This repository is for backup my personal workspace that includes configuration 
   - [Install](#install)
     - [Connect to GitHub](#connect-to-github)
   - [Thanks](#thanks)
+  - [License](#license)
 
 ## Background
 
@@ -92,3 +93,7 @@ For more information go to the [github SSH documentation](https://docs.github.co
 ## Thanks
 
 I really appreciate that you have come this far, thank you very much, for me, a 18 years old student, that someone viewed his project is a very large achievement, and I hope that my code can be useful to you.
+
+## License
+
+[MIT © LuckJMG](LICENSE)
