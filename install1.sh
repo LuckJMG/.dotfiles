@@ -16,7 +16,7 @@ mkdir packages projects tests
 ## Update system
 sudo apt update
 sudo apt upgrade
-sudo apt install -y curl nano git zsh build-essential
+sudo apt install -y curl nano bat git zsh build-essential
 sudo apt autoclean
 
 # Git
