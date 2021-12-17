@@ -15,8 +15,8 @@ mkdir packages projects tests
 
 ## Update system
 sudo apt update
-sudo apt upgrade
-sudo apt install -y curl micro bat git zsh build-essential
+sudo apt upgrade -y
+sudo apt install -y curl micro bat git zsh build-essential neofetch trash-cli
 
 # Git
 ## Packages
@@ -48,9 +48,9 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 brew bundle --global
 
 ## Configure packages
-mkdir ~/.config/micro/colorschemes
+mkdir -p ~/.config/micro/colorschemes
 mv ~/packages/micro-dracula/dracula.micro ~/.config/micro/colorschemes/dracula.micro
-printf "{\n    \"colorscheme\": \"dracula\"\n}" >> settings.json
+printf "{\n    \"colorscheme\": \"dracula\"\n}" >> ~/.config/micro/settings.json
 
 
 # Oh-my-zsh
