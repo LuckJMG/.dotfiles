@@ -59,7 +59,7 @@ alias release="standard-version"
 alias newrepo="~/packages/newrepo/src/main.sh"
 
 ## Shortcuts
-alias gcm="git commit -m -v"
+alias gcm="git commit -v -m"
 alias bat="batcat"
 alias del="trash-put"
 alias empty="trash-empty -f"
