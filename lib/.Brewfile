@@ -8,6 +8,10 @@ brew "curl"
 brew "git"
 # Modern and intuitive terminal-based text editor
 brew "micro"
+# Fast, highly customisable system info script
+brew "neofetch"
+# Command-line interface to the freedesktop.org trashcan
+brew "trash-cli"
 # Tracks most-used directories to make cd smarter
 brew "z"
 # UNIX shell (command interpreter)
