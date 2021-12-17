@@ -23,7 +23,6 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 
 
 # Plugins
-plugins=(git)
 . /home/linuxbrew/.linuxbrew/etc/profile.d/z.sh
 source ~/.oh-my-zsh/oh-my-zsh.sh
 source /home/linuxbrew/.linuxbrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -56,11 +55,12 @@ function update() {
 
 # Aliases
 ## Packages
-alias bat="batcat"
 alias release="standard-version"
 alias newrepo="~/packages/newrepo/src/main.sh"
 
 ## Shortcuts
+alias gcm="git commit -m -v"
+alias bat="batcat"
 alias del="trash-put"
 alias empty="trash-empty -f"
 
