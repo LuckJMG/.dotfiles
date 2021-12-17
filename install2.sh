@@ -13,7 +13,9 @@ mv ~/packages/zsh-dracula/lib ~/.oh-my-zsh/themes/lib
 ## Cleanup
 rm -rf ~/.zshrc ~/packages/zsh-dracula ~/packages/micro-dracula
 sudo apt autoclean
+sudo apt autoremove
 brew cleanup
+brew autoremove
 
 ## Configure zsh
 setopt autocd
