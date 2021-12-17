@@ -3,6 +3,7 @@
 # Start
 if [ "$PWD" = "/mnt/c/Users/Luck" ]; then
     cd ~ || exit
+    neofetch
 fi
 
 # Export paths
@@ -31,14 +32,14 @@ source /home/linuxbrew/.linuxbrew/share/zsh-autosuggestions/zsh-autosuggestions.
 
 # Functions
 function reset() {
-    if [ -n "$1" ]; then
-        cd ..
-        rm -rf "$1"
-        mkdir "$1"
-        cd "$1"
-    else
-        echo "Folder name required"
-    fi
+  if [ -n "$1" ]; then
+    cd ..
+    rm -rf "$1"
+    mkdir "$1"
+    cd "$1"
+  else
+    echo "Folder name required"
+  fi
 }
 function update() {
   sudo apt update
@@ -60,13 +61,14 @@ alias release="standard-version"
 alias newrepo="~/packages/newrepo/src/main.sh"
 
 ## Shortcuts
-alias del="rm -rf"
+alias del="trash-put"
+alias empty="trash-empty -f"
 
 ## Paths
 ### Files
-alias zshrc="code ~/.zshrc"
-alias npmrc="code ~/.npmrc"
-alias gitconfig="code ~/.gitconfig"
+alias zshrc="micro ~/.zshrc"
+alias npmrc="micro ~/.npmrc"
+alias gitconfig="micro ~/.gitconfig"
 
 ### Folders
 alias packages="cd ~/packages"
