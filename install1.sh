@@ -27,7 +27,7 @@ fi
 
 # Git
 ## Packages
-git clone https://github.com/dracula/zsh.git ~/packages/dracula-zsh
+git clone https://github.com/LuckJMG/dracula-zsh.git ~/packages/dracula-zsh
 git clone https://github.com/dracula/zsh-syntax-highlighting.git ~/packages/dracula-zsh-syntax-highlighting
 git clone https://github.com/dracula/micro.git ~/packages/dracula-micro
 git clone https://github.com/LuckJMG/newrepo.git ~/packages/newrepo
