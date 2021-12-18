@@ -7,11 +7,10 @@ LIB_PATH="$(dirname "$0")/lib"
 cd ~ || exit
 
 ## Set Dracula Theme
-mv ~/packages/zsh-dracula/dracula.zsh-theme ~/.oh-my-zsh/themes/dracula.zsh-theme
-mv ~/packages/zsh-dracula/lib ~/.oh-my-zsh/themes/lib
+ln -s ~/packages/dracula-zsh/dracula.zsh-theme ~/.oh-my-zsh/themes/dracula.zsh-theme
 
 ## Cleanup
-rm -rf ~/.zshrc ~/packages/zsh-dracula ~/packages/micro-dracula
+rm -rf ~/.zshrc
 sudo apt autoclean
 sudo apt autoremove
 brew cleanup
