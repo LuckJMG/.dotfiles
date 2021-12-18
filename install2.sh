@@ -11,8 +11,13 @@ ln -s ~/packages/dracula-zsh/dracula.zsh-theme ~/.oh-my-zsh/themes/dracula.zsh-t
 
 ## Cleanup
 rm -rf ~/.zshrc
-sudo apt autoclean
-sudo apt autoremove
+if [ "$PWD" = "/root" ]; then
+  apt autoremove
+  apt autoclean
+else
+  sudo apt autoremove
+  sudo apt autoclean
+fi
 brew cleanup
 brew autoremove
 
