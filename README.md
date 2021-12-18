@@ -94,6 +94,7 @@ These are the apps, packages, themes and fonts that I use in my workspace, Linux
 - [Notion](https://www.notion.so/) as workflow manager.
 - [VS Code](https://code.visualstudio.com/) as main code editor.
 - [Windows Terminal](https://github.com/Microsoft/Terminal) as main terminal.
+- [wsl2](https://docs.microsoft.com/en-us/windows/wsl/) as workspace environment.
 
 ### Linux
 
