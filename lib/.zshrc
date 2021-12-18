@@ -9,20 +9,14 @@ fi
 # Export paths
 export LANG=en_US.UTF-8
 export EDITOR="code"
-export NVM_DIR="$HOME/.nvm"
 export MICRO_TRUECOLOR=1
 
 # Options
 ZSH_THEME="dracula"
 CASE_SENSITIVE="true"
 
-# Packages config
-## nvm
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-
-
 # Plugins
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 . /home/linuxbrew/.linuxbrew/etc/profile.d/z.sh
 source ~/.oh-my-zsh/oh-my-zsh.sh
 source /home/linuxbrew/.linuxbrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -41,21 +35,22 @@ function reset() {
   fi
 }
 function update() {
+  # Update & Upgrade
   sudo apt update
   sudo apt -y upgrade
-  sudo apt autoclean
   brew update
   brew upgrade
+  npm update
+
+  # Cleanup
+  sudo apt autoremove
+  sudo apt autoclean
+  brew autoremove
   brew cleanup
-  nvm deactivate
-  nvm uninstall node
-  nvm install node
-  npm install --global standard-version husky @commitlint/{config-conventional,cli} npm
 }
 
 # Aliases
 ## Packages
-alias release="standard-version"
 alias newrepo="~/packages/newrepo/src/main.sh"
 
 ## Shortcuts
@@ -63,6 +58,7 @@ alias gcm="git commit -v -m"
 alias bat="batcat"
 alias del="trash-put"
 alias empty="trash-empty -f"
+alias release="standard-version"
 
 ## Paths
 ### Files
