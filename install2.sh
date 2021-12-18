@@ -18,6 +18,5 @@ brew cleanup
 brew autoremove
 
 ## Configure zsh
-setopt autocd
 ln -s "$LIB_PATH"/.zshrc ~/.zshrc
 zsh
