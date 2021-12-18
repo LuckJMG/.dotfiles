@@ -54,7 +54,9 @@ function update() {
 alias newrepo="~/packages/newrepo/src/main.sh"
 
 ## Shortcuts
+alias ga="git add ."
 alias gcm="git commit -v -m"
+alias gp="git push origin main test"
 alias bat="batcat"
 alias del="trash-put"
 alias empty="trash-empty -f"
