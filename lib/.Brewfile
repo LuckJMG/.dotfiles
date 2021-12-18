@@ -14,8 +14,6 @@ brew "node"
 brew "trash-cli"
 # Tracks most-used directories to make cd smarter
 brew "z"
-# UNIX shell (command interpreter)
-brew "zsh"
 # Fish-like fast/unobtrusive autosuggestions for zsh
 brew "zsh-autosuggestions"
 # Fish shell like syntax highlighting for zsh
