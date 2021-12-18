@@ -19,8 +19,8 @@ CASE_SENSITIVE="true"
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 . /home/linuxbrew/.linuxbrew/etc/profile.d/z.sh
 source ~/.oh-my-zsh/oh-my-zsh.sh
+source ~/packages/dracula-zsh-syntax-highlighting/zsh-syntax-highlighting.sh
 source /home/linuxbrew/.linuxbrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/packages/zsh-syntax-dracula/zsh-syntax-highlighting.sh
 source /home/linuxbrew/.linuxbrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Functions
