@@ -6,18 +6,7 @@
 
 Personal workspace backup for windows wsl2 (ubuntu 20.04).
 
-This repository is for backup my personal workspace that includes configuration dotfiles and apps for windows wsl2, apart from that, there are other apps that are installed in windows. The programs that I use are:
-
-- [Visual Studio Code](https://code.visualstudio.com/) with [wsl2](https://docs.microsoft.com/en-us/windows/wsl/about) ([ubuntu 20.04](https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6#activetab=pivot:overviewtab)) as text editor.
-- [Zsh](https://zsh.sourceforge.io/) with [oh-my-zsh](https://ohmyz.sh/) as shell ([z](https://github.com/rupa/z), [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) and [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)).
-- [Windows Terminal](https://www.microsoft.com/en-US/p/windows-terminal) as terminal.
-- [Git](https://git-scm.com/) as version manager.
-- [Docker](https://www.docker.com/) for encapsulation and testing.
-- [Nvm](https://github.com/nvm-sh/nvm) for node management.
-- [Node](https://nodejs.org/en/) for project dependencies ([standard-version](https://github.com/conventional-changelog/standard-version), [husky](https://github.com/typicode/husky) and [commitlint](https://commitlint.js.org/#/)).
-- [Homebrew](https://brew.sh/) for package management ([curl](https://curl.se/), [bat](https://github.com/sharkdp/bat) and [micro](https://micro-editor.github.io/)).
-- [Dracula Theme](https://draculatheme.com/) as main theme of all the workspace.
-- [Fira Code](https://github.com/tonsky/FiraCode) as main font of all the workspace.
+This repository is for backup my personal workspace that includes configuration dotfiles and [apps](#linux) for windows wsl2, apart from that, there are other apps from windows that I use in my workspace, which I will include in the [Specifications](#windows) section.
 
 ## Table of Contents
 
@@ -26,6 +15,10 @@ This repository is for backup my personal workspace that includes configuration 
   - [Background](#background)
   - [Install](#install)
     - [Connect to GitHub](#connect-to-github)
+  - [Specifications](#specifications)
+    - [Windows](#windows)
+    - [Linux](#linux)
+    - [Other](#other)
   - [Thanks](#thanks)
   - [License](#license)
 
@@ -89,6 +82,42 @@ ssh -T git@github.com
 ```
 
 For more information go to the [github SSH documentation](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh).
+
+## Specifications
+
+These are the apps, packages, themes and fonts that I use in my workspace, Linux packages are installed and configured automatically, Windows and Others must be installed manually.
+
+### Windows
+
+- [Brave](https://brave.com/) as main browser.
+- [Docker Desktop](https://www.docker.com/) for testing.
+- [Notion](https://www.notion.so/) as workflow manager.
+- [VS Code](https://code.visualstudio.com/) as main code editor.
+- [Windows Terminal](https://github.com/Microsoft/Terminal) as main terminal.
+
+### Linux
+
+- [bat](https://github.com/sharkdp/bat) as terminal text viewer.
+- [commitlint](https://commitlint.js.org/) for commit standardization.
+- [Git](https://git-scm.com/) as version manager.
+- [Homebrew](https://brew.sh/) as package manager.
+- [Micro](https://micro-editor.github.io/) as terminal text editor.
+- [neofetch](https://github.com/dylanaraps/neofetch) as PC showcase.
+- [Node](https://nodejs.org/en/) as project dependencies manager.
+- [Oh My Zsh](https://ohmyz.sh/) for shell personalization.
+- [standard-version](https://github.com/conventional-changelog/standard-version) for versioning standardization.
+- [trash-cli](https://github.com/andreafrancia/trash-cli) as terminal bin.
+- [z](https://github.com/rupa/z) for quick terminal navigation.
+- [zsh](https://www.zsh.org/) as main shell.
+- [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) for shell use help.
+- [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) for shell syntax highlighting.
+
+### Other
+
+- [Dracula theme](https://draculatheme.com/) as main theme.
+- [FiraCode](https://github.com/tonsky/FiraCode) as main code font.
+- [Semantic Versioning](https://semver.org/) as versioning standard.
+- [standard-readme](https://github.com/RichardLitt/standard-readme) as README standard.
 
 ## Thanks
 
