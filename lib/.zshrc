@@ -10,6 +10,7 @@ fi
 export LANG=en_US.UTF-8
 export EDITOR="code"
 export MICRO_TRUECOLOR=1
+export PAGER="most"
 
 # Options
 ZSH_THEME="dracula"

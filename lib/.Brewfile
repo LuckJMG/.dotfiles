@@ -4,6 +4,8 @@ tap "homebrew/core"
 brew "bat"
 # Modern and intuitive terminal-based text editor
 brew "micro"
+# Powerful paging program
+brew "most"
 # Fast, highly customisable system info script
 brew "neofetch"
 # Platform built on V8 to build network applications

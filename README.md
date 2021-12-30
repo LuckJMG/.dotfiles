@@ -103,6 +103,7 @@ These are the apps, packages, themes and fonts that I use in my workspace, Linux
 - [Git](https://git-scm.com/) as version manager.
 - [Homebrew](https://brew.sh/) as package manager.
 - [Micro](https://micro-editor.github.io/) as terminal text editor.
+- [most](http://www.jedsoft.org/most/) for info highlighting.
 - [neofetch](https://github.com/dylanaraps/neofetch) as PC showcase.
 - [Node](https://nodejs.org/en/) as project dependencies manager.
 - [Oh My Zsh](https://ohmyz.sh/) for shell personalization.
