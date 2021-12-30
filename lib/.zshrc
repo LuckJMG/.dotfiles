@@ -40,7 +40,7 @@ function update() {
   sudo apt -y upgrade
   brew update
   brew upgrade
-  npm update
+  npm -g update
 
   # Cleanup
   sudo apt autoremove
