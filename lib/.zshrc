@@ -3,7 +3,6 @@
 # Start
 if [ "$PWD" = "/mnt/c/Users/Luck" ]; then
     cd ~ || exit
-    neofetch
 fi
 
 # Export paths
@@ -35,13 +34,13 @@ function reset() {
     echo "Folder name required"
   fi
 }
+
 function update() {
   # Update & Upgrade
   sudo apt update
   sudo apt -y upgrade
   brew update
   brew upgrade
-  npm -g update
 
   # Cleanup
   sudo apt autoremove
@@ -51,26 +50,13 @@ function update() {
 }
 
 # Aliases
-## Packages
-alias newrepo="~/packages/newrepo/src/main.sh"
+## Files
+alias zshrc="code ~/.zshrc"
+alias npmrc="code ~/.npmrc"
+alias gitconfig="code ~/.gitconfig"
 
-## Shortcuts
-alias ga="git add ."
-alias gcm="git commit -v -m"
-alias gp="git push origin main test"
-alias del="trash-put"
-alias empty="trash-empty -f"
-alias release="standard-version"
-
-## Paths
-### Files
-alias zshrc="micro ~/.zshrc"
-alias npmrc="micro ~/.npmrc"
-alias gitconfig="micro ~/.gitconfig"
-
-### Folders
+## Folders
 alias packages="cd ~/packages"
 alias projects="cd ~/projects"
-alias tests="cd ~/tests"
 alias ohmyzsh="cd ~/.oh-my-zsh"
 alias dotfiles="cd ~/.dotfiles && code ~/.dotfiles"
