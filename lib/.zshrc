@@ -60,3 +60,6 @@ alias packages="cd ~/packages"
 alias projects="cd ~/projects"
 alias ohmyzsh="cd ~/.oh-my-zsh"
 alias dotfiles="cd ~/.dotfiles && code ~/.dotfiles"
+
+## Python
+alias venv="source ./.venv/bin/activate"
