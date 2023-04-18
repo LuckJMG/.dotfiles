@@ -90,25 +90,17 @@ These are the apps, packages, themes and fonts that I use in my workspace, Linux
 ### Windows
 
 - [Brave](https://brave.com/) as main browser.
-- [Docker Desktop](https://www.docker.com/) for testing.
-- [Notion](https://www.notion.so/) as workflow manager.
 - [VS Code](https://code.visualstudio.com/) as main code editor.
 - [Windows Terminal](https://github.com/Microsoft/Terminal) as main terminal.
 - [wsl2](https://docs.microsoft.com/en-us/windows/wsl/) as workspace environment.
 
 ### Linux
 
-- [bat](https://github.com/sharkdp/bat) as terminal text viewer.
-- [commitlint](https://commitlint.js.org/) for commit standardization.
 - [Git](https://git-scm.com/) as version manager.
 - [Homebrew](https://brew.sh/) as package manager.
-- [Micro](https://micro-editor.github.io/) as terminal text editor.
-- [most](http://www.jedsoft.org/most/) for info highlighting.
 - [neofetch](https://github.com/dylanaraps/neofetch) as PC showcase.
 - [Node](https://nodejs.org/en/) as project dependencies manager.
 - [Oh My Zsh](https://ohmyz.sh/) for shell personalization.
-- [standard-version](https://github.com/conventional-changelog/standard-version) for versioning standardization.
-- [trash-cli](https://github.com/andreafrancia/trash-cli) as terminal bin.
 - [z](https://github.com/rupa/z) for quick terminal navigation.
 - [zsh](https://www.zsh.org/) as main shell.
 - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) for shell use help.
@@ -118,8 +110,6 @@ These are the apps, packages, themes and fonts that I use in my workspace, Linux
 
 - [Dracula theme](https://draculatheme.com/) as main theme.
 - [FiraCode](https://github.com/tonsky/FiraCode) as main code font.
-- [Semantic Versioning](https://semver.org/) as versioning standard.
-- [standard-readme](https://github.com/RichardLitt/standard-readme) as README standard.
 
 ## Thanks
 
