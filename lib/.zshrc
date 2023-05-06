@@ -12,6 +12,8 @@ export EDITOR="code"
 # Options
 ZSH_THEME="dracula"
 CASE_SENSITIVE="true"
+LC_CTYPE=en_US.UTF-8
+LC_ALL=en_US.UTF-8
 
 # Plugins
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
