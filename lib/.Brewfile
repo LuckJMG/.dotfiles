@@ -1,5 +1,7 @@
 tap "homebrew/bundle"
 tap "homebrew/core"
+# Clone of cat(1) with syntax highlighting and Git integration
+brew "bat"
 # Distributed revision control system
 brew "git"
 # Fast, highly customisable system info script
