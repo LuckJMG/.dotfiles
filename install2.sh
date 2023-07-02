@@ -7,7 +7,7 @@ LIB_PATH="$(dirname "$0")/lib"
 cd ~ || exit
 
 ## Set Dracula Theme
-ln -s ~/packages/dracula-zsh/dracula.zsh-theme ~/.oh-my-zsh/themes/dracula.zsh-theme
+ln -s "$LIB_PATH"/dracula.zsh-theme ~/.oh-my-zsh/themes/dracula.zsh-theme
 
 ## Cleanup
 rm -rf ~/.zshrc
