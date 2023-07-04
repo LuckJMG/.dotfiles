@@ -7,13 +7,14 @@ fi
 
 # Export paths
 export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+export LC_CTYPE=en_US.UTF-8
 export EDITOR="code"
 
 # Options
 ZSH_THEME="dracula"
 CASE_SENSITIVE="true"
-LC_CTYPE=en_US.UTF-8
-LC_ALL=en_US.UTF-8
 
 # Plugins
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
@@ -25,17 +26,6 @@ source /home/linuxbrew/.linuxbrew/share/zsh-syntax-highlighting/zsh-syntax-highl
 source /home/linuxbrew/.linuxbrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Functions
-function reset() {
-  if [ -n "$1" ]; then
-    cd ..
-    rm -rf "$1"
-    mkdir "$1"
-    cd "$1"
-  else
-    echo "Folder name required"
-  fi
-}
-
 function update() {
   # Update & Upgrade
   sudo apt update
