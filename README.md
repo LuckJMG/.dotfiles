@@ -1,7 +1,5 @@
 # .dotfiles
 
-[![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
-[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 ![GitHub](https://img.shields.io/github/license/LuckJMG/.dotfiles)
 
 Personal workspace backup for windows wsl2 (ubuntu 20.04).
@@ -15,12 +13,7 @@ This repository is for backup my personal workspace that includes configuration 
   - [Background](#background)
   - [Install](#install)
     - [Connect to GitHub](#connect-to-github)
-  - [Specifications](#specifications)
-    - [Windows](#windows)
-    - [Linux](#linux)
-    - [Other](#other)
   - [Thanks](#thanks)
-  - [License](#license)
 
 ## Background
 
@@ -38,7 +31,6 @@ Then execute `install1.sh` to install the first part of the workspace:
 
 ``` bash
 ~/.dotfiles/install1.sh
-# When brew ask you to press enter, press enter
 # When oh-my-zsh ask you to set zsh as the default shell, accept
 ```
 
@@ -83,38 +75,6 @@ ssh -T git@github.com
 
 For more information go to the [github SSH documentation](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh).
 
-## Specifications
-
-These are the apps, packages, themes and fonts that I use in my workspace, Linux packages are installed and configured automatically, Windows and Others must be installed manually.
-
-### Windows
-
-- [Brave](https://brave.com/) as main browser.
-- [VS Code](https://code.visualstudio.com/) as main code editor.
-- [Windows Terminal](https://github.com/Microsoft/Terminal) as main terminal.
-- [wsl2](https://docs.microsoft.com/en-us/windows/wsl/) as workspace environment.
-
-### Linux
-
-- [Git](https://git-scm.com/) as version manager.
-- [Homebrew](https://brew.sh/) as package manager.
-- [neofetch](https://github.com/dylanaraps/neofetch) as PC showcase.
-- [Node](https://nodejs.org/en/) as project dependencies manager.
-- [Oh My Zsh](https://ohmyz.sh/) for shell personalization.
-- [z](https://github.com/rupa/z) for quick terminal navigation.
-- [zsh](https://www.zsh.org/) as main shell.
-- [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) for shell use help.
-- [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) for shell syntax highlighting.
-
-### Other
-
-- [Dracula theme](https://draculatheme.com/) as main theme.
-- [FiraCode](https://github.com/tonsky/FiraCode) as main code font.
-
 ## Thanks
 
 I really appreciate that you have come this far, thank you very much, for me, a 18 years old student, that someone viewed his project is a very large achievement, and I hope that my code can be useful to you.
-
-## License
-
-[MIT © LuckJMG](LICENSE)
