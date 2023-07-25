@@ -43,6 +43,7 @@ function update() {
 # Aliases
 alias ls="exa --classify --oneline --group-directories-first"
 alias ll="exa --header --all --classify --long --group-directories-first --no-user"
+alias tree="exa -tree"
 alias cat="batcat"
 alias cd="z"
 alias zz="z -"
