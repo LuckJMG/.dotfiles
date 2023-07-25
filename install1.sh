@@ -15,7 +15,7 @@ mkdir packages projects
 if [ "$PWD" = "/root" ]; then
   apt update
   apt upgrade -y
-  apt install -y curl git zsh
+  apt install -y curl git zoxide exa batcat zsh
 else
   sudo apt update
   sudo apt upgrade -y
