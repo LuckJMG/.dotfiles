@@ -1,10 +1,5 @@
 #!/usr/bin/env bash
 
-# Start
-if [ "$PWD" = "/mnt/c/Users/Luck" ]; then
-    cd ~ || exit
-fi
-
 # Export paths
 export LANG=C.UTF-8
 export LANGUAGE=C.UTF-8
@@ -24,28 +19,13 @@ plugins=(
   zsh-autosuggestions
   zsh-syntax-highlighting
 )
-source "$HOME/.cargo/env"
 source ~/.oh-my-zsh/oh-my-zsh.sh
-source ~/packages/dracula-zsh-syntax-highlighting/zsh-syntax-highlighting.sh
+source ~/Packages/dracula-zsh-syntax-highlighting/zsh-syntax-highlighting.sh
 eval "$(zoxide init zsh)"
 
-# Functions
-function update() {
-  # Update & Upgrade
-  sudo apt update
-  sudo apt -y upgrade
-
-  # Cleanup
-  sudo apt autoremove
-  sudo apt autoclean
-}
-
 # Aliases
-alias ls="exa  --icons --classify --oneline --group-directories-first"
-alias ll="exa  --icons --header --all --classify --long --group-directories-first --no-user"
+alias ls="exa  --icons --classify --group-directories-first"
+alias ll="exa  --icons --header --classify --long --group-directories-first"
 alias tree="exa --tree --icons --all"
-alias cat="batcat"
+alias cat="bat"
 alias cd="z"
-alias zz="z -"
-alias aptls='apt list --installed | grep "\[installed\]"'
-alias venv="source ./.venv/bin/activate"
