@@ -3,13 +3,4 @@
 	email = 25126199+LuckJMG@users.noreply.github.com
 
 [core]
-	editor = code --wait
-	excludesfile = ~/.gitignore_global
-
-[init]
-	defaultBranch = main
-
-[color]
-	ui = always
-[credential]
-	helper = /mnt/c/Program\\ Files/Git/mingw64/bin/git-credential-manager.exe
+	editor = nvim

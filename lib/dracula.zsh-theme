@@ -13,7 +13,7 @@
 # @maintainer Avalon Williams <avalonwilliams@protonmail.com>
 
 # Initialization {{{
-source ~/packages/dracula-zsh/lib/async.zsh
+source ~/Packages/dracula-zsh/lib/async.zsh
 autoload -Uz add-zsh-hook
 setopt PROMPT_SUBST
 async_init
