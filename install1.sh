@@ -6,23 +6,14 @@ LIB_PATH="$(dirname "$0")/lib"
 cd ~ || exit
 
 ## Files and folders
-rm -rf .zshrc .gitconfig .gitignore_global
+mv .zshrc .pre-dotfiles-zshrc
+mv .gitconfig .pre-dotfiles-gitconfig
 ln -s "$LIB_PATH"/.gitconfig ~/.gitconfig
-ln -s "$LIB_PATH"/.gitignore_global ~/.gitignore_global
-mkdir packages projects
-
-## Update system
-if [ "$PWD" = "/root" ]; then
-  apt update
-  apt upgrade -y
-  apt install -y curl git zoxide exa batcat zsh
-else
-  sudo apt update
-  sudo apt upgrade -y
-  sudo apt install -y curl git zsh
-fi
+mkdir Projects Packages 
 
 # Packages
+sudo dnf install neovim zoxide exa bat
+git clone https://github.com/LuckJMG/Neovim-Config.git ~/.config/nvim
 git clone https://github.com/dracula/zsh.git ~/packages/dracula-zsh
 git clone https://github.com/dracula/zsh-syntax-highlighting.git ~/packages/dracula-zsh-syntax-highlighting
 
