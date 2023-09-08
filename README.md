@@ -1,23 +1,16 @@
 # .dotfiles
 
-![GitHub](https://img.shields.io/github/license/LuckJMG/.dotfiles)
+Personal workspace backup for linux (fedora) and quick setup.
 
-Personal workspace backup for windows wsl2 (ubuntu 20.04).
+## Contents
 
-This repository is for backup my personal workspace that includes configuration dotfiles and [apps](#linux) for windows wsl2, apart from that, there are other apps from windows that I use in my workspace, which I will include in the [Specifications](#windows) section.
-
-## Table of Contents
-
-- [.dotfiles](#dotfiles)
-  - [Table of Contents](#table-of-contents)
-  - [Background](#background)
-  - [Install](#install)
-    - [Connect to GitHub](#connect-to-github)
-  - [Thanks](#thanks)
-
-## Background
-
-The idea of this repository came to me when I saw a video of fireship called [~/.dotfiles in 100 seconds](https://www.youtube.com/watch?v=r_MpUP6aKiQ), then I started this project. First it was the dotfiles and the standard files that I normally use in a project but then I separated them in 2 projects, this and [newrepo](https://github.com/LuckJMG/newrepo).
+- [Neovim](https://neovim.io/)
+- [zoxide](https://github.com/ajeetdsouza/zoxide)
+- [exa](https://github.com/ogham/exa)
+- [bat](https://github.com/sharkdp/bat)
+- [zsh](https://www.zsh.org/) (with [oh-my-zsh](https://ohmyz.sh/), [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) and [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting))
+- [My Neovim Config](https://github.com/LuckJMG/Neovim-Config)
+- [Dracula Theme](https://draculatheme.com/)
 
 ## Install
 
@@ -74,7 +67,3 @@ ssh -T git@github.com
 ```
 
 For more information go to the [github SSH documentation](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh).
-
-## Thanks
-
-I really appreciate that you have come this far, thank you very much, for me, a 18 years old student, that someone viewed his project is a very large achievement, and I hope that my code can be useful to you.
