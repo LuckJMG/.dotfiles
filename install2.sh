@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-LIB_PATH="$(dirname "$0")/lib"
+BASE_DIR="$( cd "$( dirname "$0" )" && pwd )"
+LIB_PATH="$BASE_DIR/lib"
 
 # Post oh-my-zsh
 ## Start at home directory
