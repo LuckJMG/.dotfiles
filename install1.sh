@@ -12,7 +12,7 @@ ln -s "$LIB_PATH"/.gitconfig ~/.gitconfig
 mkdir Projects Packages 
 
 # Packages
-sudo dnf install neovim zoxide exa bat
+sudo dnf install neovim zoxide exa bat zsh
 git clone https://github.com/LuckJMG/Neovim-Config.git ~/.config/nvim
 git clone https://github.com/dracula/zsh.git ~/packages/dracula-zsh
 git clone https://github.com/dracula/zsh-syntax-highlighting.git ~/packages/dracula-zsh-syntax-highlighting
