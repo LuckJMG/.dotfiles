@@ -29,4 +29,8 @@ alias ll="exa  --icons --header --classify --long --group-directories-first"
 alias tree="exa --tree --icons --all"
 alias cat="bat"
 alias cd="z"
-alias vim="nvim"
+
+function vim {
+    z $1
+    nvim .
+}
