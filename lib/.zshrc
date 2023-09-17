@@ -10,11 +10,11 @@ export BAT_THEME="Dracula"
 export EXA_COLORS="uu=36:gu=37:sn=32:sb=32:da=34:ur=34:uw=35:ux=36:ue=36:gr=34:gw=35:gx=36:tr=34:tw=35:tx=36:"
 
 # Options
-ZSH_THEME="dracula"
-CASE_SENSITIVE="true"
+export ZSH_THEME="dracula"
+export CASE_SENSITIVE="true"
 
 # Plugins
-plugins=(
+export plugins=(
   colored-man-pages
   zsh-autosuggestions
   zsh-syntax-highlighting
@@ -31,6 +31,17 @@ alias cat="bat"
 alias cd="z"
 
 function vim {
-    z $1
+    if [[ -z $1 ]]; then
+        nvim
+        return
+    fi
+
+    z_error=$(z "$1" 2>&1)
+    if [[ $z_error == "zoxide: no match found" ]]; then
+        nvim "$1"
+        return
+    fi
+
+    z "$1"
     nvim .
 }
