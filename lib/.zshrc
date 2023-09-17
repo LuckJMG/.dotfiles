@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# shellcheck source=/dev/null
 
 # Export paths
 export LANG=C.UTF-8
@@ -19,6 +20,7 @@ export plugins=(
   zsh-autosuggestions
   zsh-syntax-highlighting
 )
+
 source ~/.oh-my-zsh/oh-my-zsh.sh
 source ~/Packages/dracula-zsh-syntax-highlighting/zsh-syntax-highlighting.sh
 eval "$(zoxide init zsh)"
@@ -44,4 +46,10 @@ function vim {
 
     z "$1"
     nvim .
+}
+
+function update {
+    sudo dnf update
+    sudo dnf autoremove
+    sudo dnf clean all
 }
