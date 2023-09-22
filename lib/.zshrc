@@ -9,8 +9,6 @@ export LC_CTYPE=C.UTF-8
 export EDITOR="code"
 export BAT_THEME="Dracula"
 export EXA_COLORS="uu=36:gu=37:sn=32:sb=32:da=34:ur=34:uw=35:ux=36:ue=36:gr=34:gw=35:gx=36:tr=34:tw=35:tx=36:"
-
-# Options
 export ZSH_THEME="dracula"
 export CASE_SENSITIVE="true"
 
@@ -23,6 +21,7 @@ export plugins=(
 
 source ~/.oh-my-zsh/oh-my-zsh.sh
 source ~/Packages/dracula-zsh-syntax-highlighting/zsh-syntax-highlighting.sh
+source "$HOME/.cargo/env"
 eval "$(zoxide init zsh)"
 
 # Aliases
@@ -53,3 +52,5 @@ function update {
     sudo dnf autoremove
     sudo dnf clean all
 }
+
+set -o vi
