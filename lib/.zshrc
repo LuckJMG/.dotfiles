@@ -14,9 +14,9 @@ export CASE_SENSITIVE="true"
 
 # Plugins
 export plugins=(
-  colored-man-pages
-  zsh-autosuggestions
-  zsh-syntax-highlighting
+	colored-man-pages
+	zsh-autosuggestions
+	zsh-syntax-highlighting
 )
 
 source ~/.oh-my-zsh/oh-my-zsh.sh
@@ -32,25 +32,27 @@ alias cat="bat"
 alias cd="z"
 
 function vim {
-    if [[ -z $1 ]]; then
-        nvim
-        return
-    fi
+	if [[ -z $1 ]]; then
+		nvim
+		return
+	fi
 
-    z_error=$(z "$1" 2>&1)
-    if [[ $z_error == "zoxide: no match found" ]]; then
-        nvim "$1"
-        return
-    fi
+	z_error=$(z "$1" 2>&1)
+	if [[ $z_error == "zoxide: no match found" ]]; then
+		nvim "$1"
+		return
+	fi
 
-    z "$1"
-    nvim .
+	z "$1"
+	nvim .
 }
 
 function update {
-    sudo dnf update
-    sudo dnf autoremove
-    sudo dnf clean all
+	sudo dnf update -y
+	sudo dnf autoremove -y
+	sudo dnf clean all
 }
 
+# Options
 set -o vi
+
