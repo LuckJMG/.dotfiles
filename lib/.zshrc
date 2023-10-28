@@ -55,4 +55,5 @@ function update {
 
 # Options
 set -o vi
+if [ "$TMUX" = "" ]; then tmux; fi
 
