@@ -14,7 +14,7 @@ mkdir Projects Packages
 
 # Packages
 sudo dnf install ripgrep nodejs util-linux-user  # Dependencies
-sudo dnf install neovim zoxide exa bat zsh tmux
+sudo dnf install neovim zoxide eza bat zsh tmux
 
 git clone https://github.com/LuckJMG/Neovim-Config.git ~/.config/nvim
 git clone https://github.com/dracula/zsh.git ~/Packages/dracula-zsh
