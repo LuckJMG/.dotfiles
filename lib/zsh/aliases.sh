@@ -2,11 +2,6 @@
 
 # System
 alias reset="source $HOME/.zshrc"
-alias update="sudo dnf update -y"
-function clean {
-	sudo dnf autoremove -y
-	sudo dnf clean all
-}
 
 # Editor
 function vim {
@@ -24,5 +19,4 @@ function vim {
 	z "$1"
 	nvim .
 }
-
 
