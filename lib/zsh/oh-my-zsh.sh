@@ -1,9 +1,9 @@
-#!/usr/bin/zsh
-
-export plugins=(
-	zsh-autosuggestions
-	zsh-syntax-highlighting
+plugins=(
+    zsh-autosuggestions
+    zsh-syntax-highlighting
 )
 
-source ~/.oh-my-zsh/oh-my-zsh.sh
+if [ -f "$HOME/.oh-my-zsh/oh-my-zsh.sh" ]; then
+    source "$HOME/.oh-my-zsh/oh-my-zsh.sh"
+fi
 
