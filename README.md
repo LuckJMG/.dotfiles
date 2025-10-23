@@ -1,69 +1,151 @@
 # .dotfiles
 
-Personal workspace backup for linux (fedora) and quick setup.
+Personal development environment configuration for Linux with automated installation.
 
-## Contents
+## Features
 
-- [Neovim](https://neovim.io/)
-- [zoxide](https://github.com/ajeetdsouza/zoxide)
-- [exa](https://github.com/ogham/exa)
-- [bat](https://github.com/sharkdp/bat)
-- [zsh](https://www.zsh.org/) (with [oh-my-zsh](https://ohmyz.sh/), [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) and [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting))
-- [My Neovim Config](https://github.com/LuckJMG/Neovim-Config)
-- [Dracula Theme](https://draculatheme.com/)
+### Core Tools
+- **[Neovim](https://neovim.io/)** - Modern modal editor ([my config](https://github.com/LuckJMG/Neovim-Config))
+- **[Tmux](https://github.com/tmux/tmux)** - Terminal multiplexer with vim bindings
+- **[Zsh](https://www.zsh.org/)** + **[Oh My Zsh](https://ohmyz.sh/)** - Advanced shell
+- **[Zoxide](https://github.com/ajeetdsouza/zoxide)** - Smart directory navigation
+- **[Eza](https://github.com/eza-community/eza)** - Modern `ls` with icons (exa fork)
+- **[Bat](https://github.com/sharkdp/bat)** - `cat` with syntax highlighting
 
-## Install
+### Zsh Plugins
+- [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) - History-based suggestions
+- [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) - Real-time highlighting
 
-To install and configure your new workspace first you need to clone this repo in your home directory `~`:
+### Theme
+- **[Dracula](https://draculatheme.com/)** - Consistent theme across all tools
 
-``` bash
-git clone https://github.com/LuckJMG/.dotfiles.git
+## Installation
+
+### Prerequisites
+- Git
+- Curl
+- Sudo access
+
+### Quick Install
+```bash
+# Clone repository
+git clone https://github.com/LuckJMG/.dotfiles.git ~/.dotfiles
+
+# Run installer
+cd ~/.dotfiles
+chmod +x install.sh
+./install.sh
 ```
 
-Then execute `install1.sh` to install the first part of the workspace:
+### Post-Installation
 
-``` bash
-~/.dotfiles/install1.sh
-# When oh-my-zsh ask you to set zsh as the default shell, accept
+**1. Restart terminal**
+```bash
+exec zsh
 ```
 
-After the execution of `install1.sh`, execute `install2.sh`:
-
-``` bash
-~/.dotfiles/install2.sh
+**2. Install Tmux plugins**
+```bash
+# Open tmux and press: Ctrl+Space + I
+tmux
+# Then: Ctrl+Space followed by Shift+I
 ```
 
-And you are ready to use my workspace.
+**3. Configure Git** (if not using my credentials)
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "your@email.com"
+```
 
-### Connect to GitHub
+## SSH Setup for GitHub
 
-After installing and configuring the workspace, we need to connect our workspace with GitHub trough a SSH key:
+<details>
+<summary>Click to expand SSH guide</summary>
 
-``` bash
-# First check if there are any existing SSH keys
+### Generate SSH key
+```bash
+# Check for existing keys
 ls -al ~/.ssh
 
-# If there aren't any available keys create a new one
-ssh-keygen -t ed25519 -C "25126199+LuckJMG@users.noreply.github.com" # Replace with your email
-# Press enter and when it ask for a passphrase press enter again
+# Generate new key (replace with your email)
+ssh-keygen -t ed25519 -C "your@email.com"
 
-# Start the ssh-agent
+# Start ssh-agent
 eval "$(ssh-agent -s)"
 
-# Create the SSH key
+# Add key
 ssh-add ~/.ssh/id_ed25519
 
-# Finally copy the content of the SSH file
+# Copy public key
 cat ~/.ssh/id_ed25519.pub
 ```
 
-Then in your GitHub account go to settings, SSH and GCP keys, create a new SSH key, give the name of your workspace and paste the content of the SSH file.
-Finally you need to authorize github.com to connect to your workspace:
+### Add to GitHub
 
-``` bash
+1. Go to GitHub → Settings → SSH and GPG keys
+2. Click "New SSH key"
+3. Paste the contents of `id_ed25519.pub`
+4. Save
+
+### Verify connection
+```bash
 ssh -T git@github.com
-# After that type the passphrase of the SSH key and
-# Finally write "yes"
+# Type "yes" when prompted
 ```
 
-For more information go to the [github SSH documentation](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh).
+[Complete GitHub SSH documentation](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)
+
+</details>
+
+## Project Structure
+
+```
+.dotfiles/
+├── lib/
+│   ├── zsh/
+│   │   ├── aliases.sh
+│   │   ├── settings.sh
+│   │   ├── oh-my-zsh.sh
+│   │   ├── filetype/       # language specific files
+│   │   └── plugins/        # personal plugins
+│   ├── .zshrc
+│   ├── .gitconfig
+│   └── .tmux.conf
+├── install.sh
+└── README.md
+```
+
+## Key Bindings
+
+### Tmux
+| Binding | Action |
+|---------|--------|
+| `Ctrl+Space` | Prefix |
+| `Prefix + \|` | Vertical split |
+| `Prefix + -` | Horizontal split |
+| `Alt+H/L` | Previous/next window |
+
+### Zsh
+| Command | Description |
+|---------|-------------|
+| `cd <dir>` | Jump to directory (zoxide) |
+| `ls` | Detailed listing with eza |
+| `tree` | Tree view (3 levels) |
+| `vim <dir>` | Open Neovim in directory (zoxide) |
+
+## Uninstall
+```bash
+# Remove configurations
+rm ~/.zshrc ~/.gitconfig ~/.tmux.conf
+rm -rf ~/.oh-my-zsh ~/.tmux/plugins
+
+# Restore from backup (adjust date)
+cp -r ~/.dotfiles-backup-YYYYMMDD-HHMMSS/* ~/
+
+# Change shell back to bash
+chsh -s $(which bash)
+```
+
+---
+
+**Note:** This is my personal setup. Feel free to fork and adapt it to your needs.
