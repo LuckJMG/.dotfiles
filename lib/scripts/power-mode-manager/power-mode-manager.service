@@ -1,0 +1,12 @@
+[Unit]
+Description=Automatic Power Profile Manager
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/power-mode-manager.sh
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+
