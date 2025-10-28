@@ -1,0 +1,15 @@
+[Unit]
+Description=Google Drive Sync on Shutdown
+DefaultDependencies=no
+Before=shutdown.target
+
+[Service]
+Type=oneshot
+ExecStart=%h/.dotfiles/lib/scripts/gsync/gsync.sh
+StandardOutput=journal
+StandardError=journal
+TimeoutStartSec=180
+
+[Install]
+WantedBy=shutdown.target
+

@@ -3,6 +3,7 @@ if [ -x "/home/linuxbrew/.linuxbrew/bin/brew" ]; then
 fi
 
 export DOTFILES="$HOME/.dotfiles/lib/zsh"
+export SCRIPTS="$HOME/.dotfiles/lib/scripts"
 
 source "$DOTFILES/oh-my-zsh.sh"
 source "$DOTFILES/settings.sh"
