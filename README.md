@@ -6,11 +6,12 @@ Personal development environment configuration for Linux with automated installa
 
 ### Core Tools
 - **[Neovim](https://neovim.io/)** - Modern modal editor ([my config](https://github.com/LuckJMG/Neovim-Config))
-- **[Tmux](https://github.com/tmux/tmux)** - Terminal multiplexer with vim bindings
-- **[Zsh](https://www.zsh.org/)** + **[Oh My Zsh](https://ohmyz.sh/)** - Advanced shell
-- **[Zoxide](https://github.com/ajeetdsouza/zoxide)** - Smart directory navigation
-- **[Eza](https://github.com/eza-community/eza)** - Modern `ls` with icons (exa fork)
-- **[Bat](https://github.com/sharkdp/bat)** - `cat` with syntax highlighting
+- **[tmux](https://github.com/tmux/tmux)** - Terminal multiplexer with vim bindings
+- **[zsh](https://www.zsh.org/)** + **[Oh My Zsh](https://ohmyz.sh/)** - Advanced shell
+- **[zoxide](https://github.com/ajeetdsouza/zoxide)** - Smart directory navigation
+- **[eza](https://github.com/eza-community/eza)** - Modern `ls` with icons (exa fork)
+- **[bat](https://github.com/sharkdp/bat)** - `cat` with syntax highlighting
+- **[ripgrep](https://github.com/BurntSushi/ripgrep)** - `grep` with steroids
 
 ### Zsh Plugins
 - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) - History-based suggestions
@@ -22,9 +23,9 @@ Personal development environment configuration for Linux with automated installa
 ## Installation
 
 ### Prerequisites
-- Git
-- Curl
-- Sudo access
+- git
+- curl
+- sudo access
 
 ### Quick Install
 ```bash
@@ -131,7 +132,8 @@ ssh -T git@github.com
 | `cd <dir>` | Jump to directory (zoxide) |
 | `ls` | Detailed listing with eza |
 | `tree` | Tree view (3 levels) |
-| `vim <dir>` | Open Neovim in directory (zoxide) |
+| `vim` | Open Neovim |
+| `zvim <dir>` | Open Neovim in directory with zoxide |
 
 ## Uninstall
 ```bash
