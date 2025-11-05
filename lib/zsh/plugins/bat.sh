@@ -1,7 +1,8 @@
 # Settings
 export BAT_THEME="Dracula"
-export BAT_PAGER=""
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export BAT_PAGER="less -R"
+export MANPAGER="sh -c 'sed -e s/.\\\\x08//g | bat -l man -p --paging=always'"
+export MANROFFOPT="-c" 
 
 # Aliases
 function cat {
