@@ -28,6 +28,7 @@ alias ls="eza --all --classify --group-directories-first --sort=extension"
 alias lsa="ls --long --icons --header --no-permissions --no-user"
 alias tree="eza --tree --icons --level=3 --git-ignore"
 alias vim=nvim
+alias z="source $HOME/.zshrc"
 
 # Initialize Homebrew
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
