@@ -27,6 +27,7 @@ alias c="clear"
 alias ls="eza --all --classify --group-directories-first --sort=extension"
 alias lsa="ls --long --icons --header --no-permissions --no-user"
 alias tree="eza --tree --icons --level=3 --git-ignore"
+alias update="sudo apt update && sudo apt upgrade -y && brew upgrade"
 alias vim=nvim
 alias z="source $HOME/.zshrc"
 
