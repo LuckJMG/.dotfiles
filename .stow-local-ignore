@@ -8,4 +8,5 @@
 lib
 install.sh
 Brewfile
+\.zsh_plugins.txt
 
