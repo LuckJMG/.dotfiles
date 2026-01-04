@@ -2,23 +2,28 @@
 
 Personal development environment configuration for Linux.
 
-## Features
-
-### Core Tools
-- **[Neovim](https://neovim.io/)** - Modern modal editor ([my config](https://github.com/LuckJMG/Neovim-Config))
-- **[tmux](https://github.com/tmux/tmux)** - Terminal multiplexer with vim bindings
-- **[zsh](https://www.zsh.org/)** + **[Oh My Zsh](https://ohmyz.sh/)** - Advanced shell
-- **[zoxide](https://github.com/ajeetdsouza/zoxide)** - Smart directory navigation
-- **[eza](https://github.com/eza-community/eza)** - Modern `ls` with icons (exa fork)
-- **[bat](https://github.com/sharkdp/bat)** - `cat` with syntax highlighting
-- **[ripgrep](https://github.com/BurntSushi/ripgrep)** - `grep` with steroids
+## Tools
+- **[Homebrew](https://brew.sh):** Cross-platform package manager for user packages.
+- **[Neovim](https://neovim.io/):** Modern modal editor with [my config](https://github.com/LuckJMG/Neovim-Config).
+- **[WezTerm](https://wezterm.org/):** Powerful cross-platform terminal emulator.
+- **[everforest](https://everforest.vercel.app/):** Consistent cross-app theme with night light compatibility.
+- **[zsh](https://www.zsh.org/):** Modern interactive shell.
 
 ### Zsh Plugins
-- [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) - History-based suggestions
-- [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) - Real-time highlighting
+- [Oh My Posh](https://ohmypo.sh/): For zen prompt styling, with theme inspired by [powerlevel10k](https://github.com/romkatv/powerlevel10k).
+- [fzf-tab](https://github.com/Aloxaf/fzf-tab): Completion with fzf integrated.
+- [fzf](https://github.com/junegunn/fzf): General purpose CLI fuzzy finder.
+- [zoxide](https://github.com/ajeetdsouza/zoxide): A smarter cd command.
+- [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions): History-based suggestions.
+- [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting): Real-time highlighting.
+- [zsh-vi-mode](https://github.com/jeffreytse/zsh-vi-mode): A better vi-mode for zsh.
 
-### Theme
-- **[Dracula](https://draculatheme.com/)** - Consistent theme across all tools
+### CLI
+- [eza](https://github.com/eza-community/eza): Modern, maintained replacement for ls.
+- [lazygit](https://github.com/jesseduffield/lazygit): Simple terminal UI for git commands.
+- [ripgrep](https://github.com/BurntSushi/ripgrep): Search tool like grep and The Silver Searcher.
+- [stow](https://www.gnu.org/software/stow/): Organize software neatly under a single directory tree.
+- [tealdeer](https://github.com/tealdeer-rs/tealdeer): Very fast implementation of tldr in Rust.
 
 ## Installation
 First you need to update and upgrade your system with its package manager, we'll use `Ubuntu` with `apt` as an example.
@@ -69,55 +74,11 @@ exec zsh
 ```
 
 ## Project Structure
-
-```
-.dotfiles/
-├── lib/
-│   ├── zsh/
-│   │   ├── aliases.sh
-│   │   ├── settings.sh
-│   │   ├── oh-my-zsh.sh
-│   │   ├── filetype/       # language specific files
-│   │   └── plugins/        # personal plugins
-│   ├── .zshrc
-│   ├── .gitconfig
-│   └── .tmux.conf
-├── install.sh
-└── README.md
-```
-
-## Key Bindings
-
-### Tmux
-| Binding | Action |
-|---------|--------|
-| `Ctrl+Space` | Prefix |
-| `Prefix + \|` | Vertical split |
-| `Prefix + -` | Horizontal split |
-| `Alt+H/L` | Previous/next window |
-
-### Zsh
-| Command | Description |
-|---------|-------------|
-| `cd <dir>` | Jump to directory (zoxide) |
-| `ls` | Detailed listing with eza |
-| `tree` | Tree view (3 levels) |
-| `vim` | Open Neovim |
-| `zvim <dir>` | Open Neovim in directory with zoxide |
-
-## Uninstall
-```bash
-# Remove configurations
-rm ~/.zshrc ~/.gitconfig ~/.tmux.conf
-rm -rf ~/.oh-my-zsh ~/.tmux/plugins
-
-# Restore from backup (adjust date)
-cp -r ~/.dotfiles-backup-YYYYMMDD-HHMMSS/* ~/
-
-# Change shell back to bash
-chsh -s $(which bash)
-```
-
----
+- `.config/nvim/`, [my config](https://github.com/LuckJMG/Neovim-Config) of nvim.
+- `.config/ohmyposh/`, prompt configuration.
+- `.gitconfig`, git configuration.
+- `.zshrc`, zsh configuration.
+- `Brewfile`, Brewfile for managing user packages.
+- `lib/`, various scripts.
 
 **Note:** This is my personal setup. Feel free to fork and adapt it to your needs.
