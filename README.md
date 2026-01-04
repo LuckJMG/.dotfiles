@@ -6,24 +6,27 @@ Personal development environment configuration for Linux.
 - **[Homebrew](https://brew.sh):** Cross-platform package manager for user packages.
 - **[Neovim](https://neovim.io/):** Modern modal editor with [my config](https://github.com/LuckJMG/Neovim-Config).
 - **[WezTerm](https://wezterm.org/):** Powerful cross-platform terminal emulator.
+- **[antidote](https://antidote.sh/):** A fast plugin manager for zsh.
 - **[everforest](https://everforest.vercel.app/):** Consistent cross-app theme with night light compatibility.
 - **[zsh](https://www.zsh.org/):** Modern interactive shell.
 
 ### Zsh Plugins
-- [Oh My Posh](https://ohmypo.sh/): For zen prompt styling, with theme inspired by [powerlevel10k](https://github.com/romkatv/powerlevel10k).
+- [ez-compinit](https://github.com/mattmc3/ez-compinit): Completion initialization.
+- [fast-syntax-highlighting](https://github.com/zdharma-continuum/fast-syntax-highlighting): Syntax highlighting.
 - [fzf-tab](https://github.com/Aloxaf/fzf-tab): Completion with fzf integrated.
-- [fzf](https://github.com/junegunn/fzf): General purpose CLI fuzzy finder.
-- [zoxide](https://github.com/ajeetdsouza/zoxide): A smarter cd command.
 - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions): History-based suggestions.
-- [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting): Real-time highlighting.
-- [zsh-vi-mode](https://github.com/jeffreytse/zsh-vi-mode): A better vi-mode for zsh.
+- [zsh-completions](https://github.com/zsh-users/zsh-completions): More completions.
+- [zsh-vi-mode](https://github.com/jeffreytse/zsh-vi-mode): A better vi-mode.
 
 ### CLI
+- [Oh My Posh](https://ohmypo.sh/): For zen prompt styling, with theme inspired by [powerlevel10k](https://github.com/romkatv/powerlevel10k).
 - [eza](https://github.com/eza-community/eza): Modern, maintained replacement for ls.
+- [fzf](https://github.com/junegunn/fzf): General purpose CLI fuzzy finder.
 - [lazygit](https://github.com/jesseduffield/lazygit): Simple terminal UI for git commands.
 - [ripgrep](https://github.com/BurntSushi/ripgrep): Search tool like grep and The Silver Searcher.
 - [stow](https://www.gnu.org/software/stow/): Organize software neatly under a single directory tree.
 - [tealdeer](https://github.com/tealdeer-rs/tealdeer): Very fast implementation of tldr in Rust.
+- [zoxide](https://github.com/ajeetdsouza/zoxide): A smarter cd command.
 
 ## Installation
 First you need to update and upgrade your system with its package manager, we'll use `Ubuntu` with `apt` as an example.
