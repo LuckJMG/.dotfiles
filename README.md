@@ -1,6 +1,6 @@
 # .dotfiles
 
-Personal development environment configuration for Linux with automated installation.
+Personal development environment configuration for Linux.
 
 ## Features
 
@@ -21,82 +21,52 @@ Personal development environment configuration for Linux with automated installa
 - **[Dracula](https://draculatheme.com/)** - Consistent theme across all tools
 
 ## Installation
+First you need to update and upgrade your system with its package manager, we'll use `Ubuntu` with `apt` as an example.
 
-### Prerequisites
-- git
-- curl
-- sudo access
-
-### Quick Install
-```bash
-# Clone repository
-git clone https://github.com/LuckJMG/.dotfiles.git ~/.dotfiles
-
-# Run installer
-cd ~/.dotfiles
-chmod +x install.sh
-./install.sh
+```sh
+sudo apt update && sudo apt upgrade -y
 ```
 
-### Post-Installation
+For the base packages install `curl`, `git` and `zsh`.
 
-**1. Restart terminal**
-```bash
+```sh
+sudo apt install curl git zsh
+```
+
+Clone this repo on `$HOME/.dotfiles`.
+
+```
+git clone https://github.com/LuckJMG/.dotfiles.git $HOME/.dotfiles
+```
+
+After that install [Homebrew](https://brew.sh/) to manage user packages, and `eval` it to use it.
+
+```sh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+```
+
+> Use Homebrew to manage only user packages, any low-level or system packages should be installed with the package manager of your distro.
+
+Install the user packages from the `Brewfile`.
+
+```sh
+brew bundle --file="$HOME/.dotfiles/Brewfile"
+```
+
+Backup any configuration file that already exists (`.zshrc`, `.config/nvim` and `.config/ohmyposh`), then `cd` to the repository and `stow` the dotfiles to access the configuration.
+
+```sh
+cd $HOME/.dotfiles
+stow .
+```
+
+Finally set `zsh` as your default shell and replace the current instance with it.
+
+```sh
+chsh -s "$(which zsh)"
 exec zsh
 ```
-
-**2. Install Tmux plugins**
-```bash
-# Open tmux and press: Ctrl+Space + I
-tmux
-# Then: Ctrl+Space followed by Shift+I
-```
-
-**3. Configure Git** (if not using my credentials)
-```bash
-git config --global user.name "Your Name"
-git config --global user.email "your@email.com"
-```
-
-## SSH Setup for GitHub
-
-<details>
-<summary>Click to expand SSH guide</summary>
-
-### Generate SSH key
-```bash
-# Check for existing keys
-ls -al ~/.ssh
-
-# Generate new key (replace with your email)
-ssh-keygen -t ed25519 -C "your@email.com"
-
-# Start ssh-agent
-eval "$(ssh-agent -s)"
-
-# Add key
-ssh-add ~/.ssh/id_ed25519
-
-# Copy public key
-cat ~/.ssh/id_ed25519.pub
-```
-
-### Add to GitHub
-
-1. Go to GitHub → Settings → SSH and GPG keys
-2. Click "New SSH key"
-3. Paste the contents of `id_ed25519.pub`
-4. Save
-
-### Verify connection
-```bash
-ssh -T git@github.com
-# Type "yes" when prompted
-```
-
-[Complete GitHub SSH documentation](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)
-
-</details>
 
 ## Project Structure
 
