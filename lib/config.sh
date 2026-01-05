@@ -2,6 +2,7 @@
 
 config() {
 	local configPath
+	local originalPath=$PWD
 
 	case $1 in
 	"zsh") configPath="$HOME/.zshrc" ;;
@@ -10,5 +11,7 @@ config() {
 	*) configPath="$HOME/.dotfiles" ;;
 	esac
 
+	cd "$configPath" || exit
 	"${EDITOR:-vi}" "$configPath"
+	cd "$originalPath" || exit
 }
