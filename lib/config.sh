@@ -6,7 +6,7 @@ config() {
 
 	case $1 in
 	"zsh") configPath="$HOME/.zshrc" ;;
-	"nvim" | "vim") configPath="$HOME/.config/nvim" ;;
+	"nvim" | "vim" | "neovim") configPath="$HOME/.config/nvim" ;;
 	"ohmyposh" | "omp") configPath="$HOME/.config/ohmyposh" ;;
 	*) configPath="$HOME/.dotfiles" ;;
 	esac
