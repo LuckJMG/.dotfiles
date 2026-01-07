@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
 
 config() {
-	local configPath
 	local originalPath=$PWD
+	local configPath
+	local tool
 
-	case $1 in
-	"zsh") configPath="$HOME/.zshrc" ;;
+	tool=$(echo "$1" | tr '[:upper:]' '[:lower:]')
+	case "$tool" in
+	"zsh" | ".zshrc") configPath="$HOME/.zshrc" ;;
 	"nvim" | "vim" | "neovim") configPath="$HOME/.config/nvim" ;;
 	"ohmyposh" | "omp") configPath="$HOME/.config/ohmyposh" ;;
 	*) configPath="$HOME/.dotfiles" ;;
