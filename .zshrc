@@ -1,3 +1,6 @@
+DOTFILES="$HOME/.dotfiles"
+LIB="$DOTFILES/lib"
+
 # History
 HISTFILE=~/.zsh_history
 HISTSIZE=5000
@@ -17,11 +20,6 @@ export EDITOR=nvim
 export VISUAL=$EDITOR
 export MANPAGER="nvim +Man!"
 
-# Keymaps
-bindkey -v
-bindkey -M vicmd 'k' history-search-backward
-bindkey -M vicmd 'j' history-search-forward
-
 # Aliases
 alias c="clear"
 alias ls="eza --all --classify --group-directories-first --sort=extension"
@@ -30,6 +28,7 @@ alias tree="eza --tree --icons --level=3 --git-ignore"
 alias update="sudo apt update && sudo apt upgrade -y && brew upgrade && antidote update"
 alias vim=nvim
 alias z="source $HOME/.zshrc"
+
 
 # Homebrew
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
@@ -48,3 +47,7 @@ zstyle ':plugin:ez-compinit' 'compstyle' 'ohmy'
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'eza -1 --color=always $realpath'
 
+# Scripts (last for priority in execution)
+source "$LIB/config.sh"
+source "$LIB/wezterm.sh"
+source "$LIB/vim-mode.zsh"
