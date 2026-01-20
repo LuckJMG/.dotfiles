@@ -23,8 +23,9 @@ alias c="clear"
 alias ls="eza --all --classify --group-directories-first --sort=extension"
 alias lsa="ls --long --icons --header --no-permissions --no-user"
 alias tree="eza --tree --icons --level=3 --git-ignore"
-alias update="sudo apt update && sudo apt upgrade -y && brew upgrade && antidote update"
+alias update="sudo apt update && sudo apt upgrade -y && brew upgrade && znap pull"
 alias vim=nvim
 alias z="source $HOME/.zshrc"
 
+znap source zdharma-continuum/fast-syntax-highlighting
 
