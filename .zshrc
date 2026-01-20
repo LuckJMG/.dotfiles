@@ -72,7 +72,7 @@ alias lsa="ls --long --icons --header --no-permissions --no-user"
 alias tree="eza --tree --icons --level=3 --git-ignore"
 alias update="sudo apt update && sudo apt upgrade -y && brew upgrade && znap pull"
 alias vim=nvim
-alias z="source $HOME/.zshrc"
+alias z="exec zsh"
 
 znap source zdharma-continuum/fast-syntax-highlighting
 
