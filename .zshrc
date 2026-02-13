@@ -57,7 +57,9 @@ source ~/.config/zsh/znap/znap.zsh
 znap prompt sindresorhus/pure
 znap source zsh-users/zsh-autosuggestions
 znap eval zoxide "zoxide init --cmd cd zsh"
+source "$LIB/bun.sh"
 source "$LIB/config.sh"
+source "$LIB/scripts.sh"
 
 znap eval fzf "fzf --zsh"
 znap source Aloxaf/fzf-tab
