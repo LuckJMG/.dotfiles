@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-config() {
+cfg() {
 	local RED="\e[0;31m"
 	local YELLOW="\e[0;33m"
 	local NC="\e[0m"
@@ -21,7 +21,7 @@ config() {
 		;;
 	esac
 
-	cd "$configPath" || exit
+	cd "$configPath" || return
 	"${EDITOR:-vi}" "$configPath"
-	cd "$originalPath" || exit
+	cd "$originalPath" || return
 }
