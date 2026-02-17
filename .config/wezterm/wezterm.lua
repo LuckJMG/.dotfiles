@@ -6,64 +6,46 @@ config.font_size = 10
 config.color_scheme = "Everforest Dark (Gogh)"
 config.font = wezterm.font("FiraCode Nerd Font")
 config.default_cursor_style = "SteadyBar"
-config.use_fancy_tab_bar = false
+config.use_fancy_tab_bar = true
 config.hide_tab_bar_if_only_one_tab = true
 
 -- Options
 config.scrollback_lines = 10000
 config.window_close_confirmation = "NeverPrompt"
+config.window_decorations = "RESIZE"
 
 -- Profiles
 config.default_domain = "WSL:Ubuntu"
 config.launch_menu = {
 	{
-		label = "PowerShell 7",
-		args = { "pwsh.exe" },
+		label = "PowerShell",
+		args = { "powershell.exe", "-NoLogo" },
+		domain = { DomainName = "local" },
 	},
 	{
 		label = "CMD",
-		args = { "cmd.exe" },
+		args = { "cmd.exe", "/k" },
+		domain = { DomainName = "local" },
 	},
 }
 
 -- Keybindings
 local action = wezterm.action
-config.leader = { key = "Space", mods = "CTRL" }
 config.keys = {
 	{
-		key = "/",
-		mods = "LEADER",
-		action = action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
-	},
-	{
-		key = "-",
-		mods = "LEADER",
-		action = action.SplitVertical({ domain = "CurrentPaneDomain" }),
-	},
-	{
-		key = "x",
-		mods = "LEADER",
+		key = "w",
+		mods = "CTRL|SHIFT",
 		action = action.CloseCurrentPane({ confirm = false }),
 	},
 	{
-		key = "w",
-		mods = "LEADER",
-		action = action.CloseCurrentTab({ confirm = false }),
-	},
-	{
 		key = "T",
-		mods = "LEADER",
+		mods = "CTRL|SHIFT",
 		action = action.ShowLauncher,
 	},
 	{
 		key = "t",
-		mods = "LEADER",
+		mods = "CTRL",
 		action = action.SpawnTab("CurrentPaneDomain"),
-	},
-	{
-		key = "v",
-		mods = "LEADER",
-		action = action.ActivateCopyMode,
 	},
 	{
 		key = "m",
@@ -71,14 +53,6 @@ config.keys = {
 		action = action.DisableDefaultAssignment,
 	},
 }
-
-for i = 1, 9 do
-	table.insert(config.keys, {
-		key = tostring(i),
-		mods = "LEADER",
-		action = action.ActivateTab(i - 1),
-	})
-end
 
 local function is_vim(pane)
 	local process_info = pane:get_foreground_process_info()
