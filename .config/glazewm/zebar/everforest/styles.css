@@ -1,0 +1,170 @@
+/**
+ * Import the Nerdfonts icon font.
+ * Ref https://www.nerdfonts.com/cheat-sheet for a cheatsheet of available Nerdfonts icons.
+ */
+@import "https://www.nerdfonts.com/assets/css/webfont.css";
+
+:root {
+  --text-size: 12px;
+  --icon-size: 12px;
+
+  --text-color-light: rgba(0 0 0 / 95%);
+  --text-color-dark: rgba(211 198 170 / 95%);
+
+  --icon-color-light: LightSteelBlue;
+  --icon-color-dark: rgba(167 192 128 / 95%);
+
+  --background-color-light: rgba(238 238 238 / 90%);
+  --background-color-dark: rgb(39 46 51 / 95%);
+  --background-color-dark-2: rgb(46 56 60 / 95%);
+  --background-color-dark-3: rgb(55 65 69 / 95%);
+
+  --green: rgb(167 192 128 / 95%);
+  --red: rgb(230 126, 128 / 95%);
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    color: var(--text-color-light);
+  }
+
+  i {
+    color: var(--icon-color-light);
+  }
+
+  #root {
+    background: var(--background-color-light);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: var(--text-color-dark);
+  }
+
+  i {
+    color: var(--icon-color-dark);
+  }
+
+  #root {
+    background: var(--background-color-dark);
+  }
+}
+
+i {
+  margin-right: 7px;
+  font-size: var(--icon-size);
+}
+
+body {
+  font-family: "FiraCode Nerd Font", ui-monospace, monospace;
+  font-size: var(--text-size);
+  overflow: hidden;
+}
+
+div,
+span,
+p {
+  cursor: default;
+  user-select: none;
+}
+
+html,
+body,
+#root {
+  height: 30px;
+}
+
+#root {
+  border-bottom: 1px solid rgb(255 255 255 / 5%);
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  height: 20px;
+  padding: 5px 1.5vw 4px;
+}
+
+.left,
+.center,
+.right {
+  display: flex;
+  align-items: center;
+}
+
+.center {
+  justify-self: center;
+}
+
+.right {
+  justify-self: end;
+}
+
+.logo,
+.binding-mode,
+.tiling-direction,
+.paused-button,
+.network,
+.memory,
+.cpu,
+.battery {
+  margin-right: 20px;
+}
+
+.workspaces {
+  display: flex;
+  align-items: center;
+}
+
+.workspace {
+  background: var(--background-color-dark-2);
+  margin-right: 4px;
+  padding: 2px 8px 1px;
+  color: var(--text-color-dark);
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+
+  &.displayed {
+    background: var(--background-color-dark-3);
+  }
+
+  &.focused,
+  &:hover {
+    color: var(--background-color-dark);
+    background: var(--green);
+  }
+}
+
+.binding-mode,
+.tiling-direction,
+.paused-button {
+  background: var(--background-color-dark-3);
+  color: var(--text-color-dark);
+  border-radius: 2px;
+  line-height: 1;
+  padding: 4px 8px;
+  border: 0;
+  cursor: pointer;
+}
+
+.binding-mode {
+  margin-right: 4px;
+}
+
+.cpu .high-usage {
+  color: var(--red);
+}
+
+.battery {
+  position: relative;
+}
+
+.battery .charging-icon {
+  position: absolute;
+  font-size: 7px;
+  left: -8px;
+  top: 3px;
+}
