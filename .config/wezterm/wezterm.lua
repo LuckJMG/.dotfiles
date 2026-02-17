@@ -33,6 +33,16 @@ config.launch_menu = {
 local action = wezterm.action
 config.keys = {
 	{
+		key = "%",
+		mods = "CTRL|SHIFT",
+		action = action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
+	},
+	{
+		key = '"',
+		mods = "CTRL|SHIFT",
+		action = action.SplitVertical({ domain = "CurrentPaneDomain" }),
+	},
+	{
 		key = "w",
 		mods = "CTRL|SHIFT",
 		action = action.CloseCurrentPane({ confirm = false }),
