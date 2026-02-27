@@ -59,7 +59,7 @@ znap source zsh-users/zsh-autosuggestions
 znap eval zoxide "zoxide init --cmd cd zsh"
 source "$LIB/bun.sh"
 source "$LIB/config.sh"
-source "$LIB/pkg.sh"
+source "$LIB/pkg/pkg-apt.sh"
 source "$LIB/scripts.sh"
 
 znap eval fzf "fzf --zsh"
