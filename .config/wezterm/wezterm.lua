@@ -7,16 +7,12 @@ config.font_size = 10
 config.color_scheme = "Everforest Dark (Gogh)"
 config.font = wezterm.font("FiraCode Nerd Font")
 config.default_cursor_style = "SteadyBar"
-config.use_fancy_tab_bar = true
 config.hide_tab_bar_if_only_one_tab = true
 config.window_background_opacity = 0.95
-
--- Options
-config.scrollback_lines = 10000
 config.window_close_confirmation = "NeverPrompt"
 
 -- Profiles
-config.default_domain = "WSL:Ubuntu"
+config.default_domain = "WSL:FedoraLinux-43"
 config.launch_menu = {
 	{
 		label = "PowerShell",
@@ -49,19 +45,14 @@ config.keys = {
 		action = action.CloseCurrentPane({ confirm = false }),
 	},
 	{
-		key = "T",
-		mods = "CTRL|SHIFT",
-		action = action.ShowLauncher,
-	},
-	{
 		key = "t",
-		mods = "CTRL",
+		mods = "CTRL|SHIFT",
 		action = action.SpawnTab("CurrentPaneDomain"),
 	},
 	{
-		key = "m",
-		mods = "CTRL|SHIFT",
-		action = action.DisableDefaultAssignment,
+		key = "t",
+		mods = "CTRL|SHIFT|ALT",
+		action = action.ShowLauncher,
 	},
 }
 
@@ -72,15 +63,8 @@ local function is_vim(pane)
 	return process_name == "nvim" or process_name == "vim"
 end
 
-local direction_keys = {
-	h = "Left",
-	j = "Down",
-	k = "Up",
-	l = "Right",
-}
-
-for key, direction in pairs(direction_keys) do
-	table.insert(config.keys, {
+local function make_nav_key(key, direction)
+	return {
 		key = key,
 		mods = "CTRL",
 		action = wezterm.action_callback(function(window, pane)
@@ -90,7 +74,12 @@ for key, direction in pairs(direction_keys) do
 				window:perform_action(action.ActivatePaneDirection(direction), pane)
 			end
 		end),
-	})
+	}
 end
+
+table.insert(config.keys, make_nav_key("h", "Left"))
+table.insert(config.keys, make_nav_key("j", "Down"))
+table.insert(config.keys, make_nav_key("k", "Up"))
+table.insert(config.keys, make_nav_key("l", "Right"))
 
 return config
