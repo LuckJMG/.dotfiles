@@ -1,9 +1,6 @@
 DOTFILES="$HOME/.dotfiles"
 LIB="$DOTFILES/lib"
 
-# Homebrew
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
 # History
 HISTFILE=~/.zsh_history
 HISTSIZE=5000
@@ -59,7 +56,7 @@ znap source zsh-users/zsh-autosuggestions
 znap eval zoxide "zoxide init --cmd cd zsh"
 source "$LIB/bun.sh"
 source "$LIB/config.sh"
-source "$LIB/pkg/pkg-apt.sh"
+source "$LIB/pkg/pkg-dnf.sh"
 source "$LIB/scripts.sh"
 
 znap eval fzf "fzf --zsh"
@@ -70,6 +67,7 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
 
 # Aliases
 alias c="clear"
+alias g="lazygit"
 alias ls="eza --all --classify --group-directories-first --sort=extension"
 alias lsa="ls --long --icons --header --no-permissions --no-user"
 alias tree="eza --tree --icons --level=3 --git-ignore"
