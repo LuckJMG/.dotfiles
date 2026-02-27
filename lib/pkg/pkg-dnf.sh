@@ -1,24 +1,24 @@
 #!/usr/bin/env bash
-CSV_FILE="$HOME/.dotfiles/lib/pkg.csv"
+CSV_FILE="$HOME/.dotfiles/lib/pkg/pkg.csv"
 
-# A package manager interface to track manually installed packages.
+# A package manager interface to track manually installed packages, dnf version.
 pkg() {
 	case "$1" in
 	"list")
 		cat "$CSV_FILE" | sed 's/^[^,]*,//'
 		;;
 	"upgrade")
-		sudo apt update && sudo apt upgrade
+		sudo dnf upgrade
 		;;
 	"search")
-		apt search -n "$2"
+		dnf search "$2"
 		;;
 	"show")
-		apt show "$2"
+		dnf info "$2"
 		;;
 	"install")
 		if [[ $(grep -c "$2$" "$CSV_FILE") -lt 1 ]]; then
-			if sudo apt install "$2"; then
+			if sudo dnf install "$2"; then
 				echo "$(date --rfc-3339 s),$2" >>"$CSV_FILE"
 			fi
 		else
@@ -28,7 +28,7 @@ pkg() {
 		;;
 	"remove")
 		if [[ $(grep -c "$2$" "$CSV_FILE") -ne 0 ]]; then
-			if sudo apt remove "$2"; then
+			if sudo dnf remove "$2"; then
 				sed -i "/,$2$/d" "$CSV_FILE"
 			fi
 		else
