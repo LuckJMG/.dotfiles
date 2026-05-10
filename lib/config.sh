@@ -13,7 +13,6 @@ cfg() {
 	case "$tool" in
 	"zsh" | ".zshrc") configPath="$HOME/.zshrc" ;;
 	"nvim" | "vim" | "neovim") configPath="$HOME/.config/nvim" ;;
-	"ohmyposh" | "omp") configPath="$HOME/.config/ohmyposh" ;;
 	"" | "dot" | "dotfiles" | ".dotfiles" | ".") configPath="$HOME/.dotfiles" ;;
 	*)
 		echo -e "${RED}[ERROR] Tool${NC} ${YELLOW}$1${NC} ${RED}not recognized${NC}"

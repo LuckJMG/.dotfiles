@@ -53,10 +53,9 @@ source ~/.config/zsh/znap/znap.zsh
 
 znap prompt sindresorhus/pure
 znap source zsh-users/zsh-autosuggestions
-znap eval zoxide "zoxide init --cmd cd zsh"
+eval "$(zoxide init --cmd cd zsh)"
 source "$LIB/bun.sh"
 source "$LIB/config.sh"
-source "$LIB/pkg/pkg-dnf.sh"
 source "$LIB/scripts.sh"
 
 znap eval fzf "fzf --zsh"
@@ -66,14 +65,9 @@ zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
 
 # Aliases
-alias c="clear"
-alias g="lazygit"
 alias ls="eza --all --classify --group-directories-first --sort=extension"
 alias lsa="ls --long --icons --header --no-permissions --no-user"
 alias tree="eza --tree --icons --level=3 --git-ignore"
-alias update="sudo apt update && sudo apt upgrade -y && brew upgrade && znap pull"
 alias vim=nvim
-alias z="exec zsh"
 
 znap source zdharma-continuum/fast-syntax-highlighting
-
