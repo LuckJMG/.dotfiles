@@ -49,14 +49,14 @@ fi
 setopt no_beep
 
 # Plugins
+[[ -r ~/.config/zsh/znap/znap.zsh ]] ||
+    git clone --depth 1 -- \
+        https://github.com/marlonrichert/zsh-snap.git ~/.config/zsh/znap
 source ~/.config/zsh/znap/znap.zsh
 
 znap prompt sindresorhus/pure
 znap source zsh-users/zsh-autosuggestions
 eval "$(zoxide init --cmd cd zsh)"
-source "$LIB/bun.sh"
-source "$LIB/config.sh"
-source "$LIB/scripts.sh"
 
 znap eval fzf "fzf --zsh"
 znap source Aloxaf/fzf-tab
@@ -69,5 +69,15 @@ alias ls="eza --all --classify --group-directories-first --sort=extension"
 alias lsa="ls --long --icons --header --no-permissions --no-user"
 alias tree="eza --tree --icons --level=3 --git-ignore"
 alias vim=nvim
+mkcd() {
+	mkdir -p "$1" && cd "$1" || return
+}
 
 znap source zdharma-continuum/fast-syntax-highlighting
+
+# Exports
+export PATH=/home/luck/.opencode/bin:$PATH
+
+[ -s "/home/luck/.bun/_bun" ] && source "/home/luck/.bun/_bun"
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
