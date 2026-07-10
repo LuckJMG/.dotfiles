@@ -8,7 +8,7 @@ SAVEHIST=$HISTSIZE
 HISTDUP=erase
 
 setopt appendhistory sharehistory hist_ignore_space
-setopt hist_ignore_all_dups hist_save_no_dups hist_ignore_dups hist_find_no_dups
+setopt hist_ignore_all_dups hist_find_no_dups
 
 # Editor
 export EDITOR=nvim
@@ -28,8 +28,7 @@ function zle-keymap-select {
 }
 zle -N zle-keymap-select
 
-zle-line-init() { zle-keymap-select; }
-zle -N zle-line-init
+zle -N zle-line-init zle-keymap-select
 
 bindkey -M viins '^?' backward-delete-char
 bindkey -M viins '^H' backward-delete-char
