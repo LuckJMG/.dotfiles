@@ -1,18 +1,7 @@
 ---
-name: refactor-audit
-description: >
-  Whole-repo audit for refactoring opportunities. Scans the entire codebase,
-  groups findings by category (extract, move, rename, simplify, dedupe,
-  reorganize-data, remove-dead, inline, api-surface), and on user selection
-  emits copy-pasteable instruction blocks another agent can execute with no
-  audit context. Use when the user says "audit for refactors", "find
-  refactoring opportunities", "what can I refactor", "refactor this repo",
-  "where should I refactor", "refactor audit", or invokes /refactor-audit.
-  Also use when the user wants to improve code structure without yet knowing
-  the specifics — the audit surfaces the candidates. Do NOT use for
-  correctness bugs, security holes, performance profiling, over-engineering
-  or deletion-only audits, diff-scoped reviews, applying refactors the user
-  already specified, or single trivial edits — route those elsewhere.
+description: Audit the whole repo for refactoring
+agent: plan
+model: minimax/MiniMax-M3
 ---
 
 # Refactor Audit
@@ -22,7 +11,7 @@ grouped report, and on selection emit self-contained instruction blocks
 another agent can execute. You never apply refactors yourself in this
 session — the output is a menu plus, on request, executable instructions.
 
-## Why this skill exists
+## Why this command exists
 
 Refactoring is easier to commit to when the candidate list is visible up
 front and each item is small enough to reason about. A developer who can see
@@ -224,6 +213,4 @@ Stop. The report stands on its own.
   output should be usable without knowing they exist.
 - The audit is a snapshot. If the user edits the repo and re-runs, findings
   may shift — that's expected.
-
-"stop refactor-audit" or "normal mode" reverts to normal behavior.
 
