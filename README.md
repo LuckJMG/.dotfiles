@@ -9,7 +9,6 @@ Personal development environment configuration for Linux.
 
 ## Tools
 - **[Ghostty](https://ghostty.org/):** Fast, native, feature-rich terminal emulator. Main terminal on Linux.
-- **[WezTerm](https://wezterm.org/):** GPU-accelerated terminal. WSL fallback.
 - **[Neovim](https://neovim.io/):** Modern modal editor with [my config](https://github.com/LuckJMG/Neovim-Config).
 - **[znap](https://github.com/marlonrichert/zsh-snap):** A fast plugin manager for zsh.
 - **[zsh](https://www.zsh.org/):** Modern interactive shell.
@@ -32,10 +31,11 @@ Personal development environment configuration for Linux.
 
 ## Installation
 
-Clone this repo on `$HOME/.dotfiles`.
+Clone this repo on `$HOME/.dotfiles` and [nvim config](https://github.com/LuckJMG/Neovim-Config).
 
 ```
 git clone https://github.com/LuckJMG/.dotfiles.git $HOME/.dotfiles
+git clone https://github.com/LuckJMG/Neovim-Config.git $HOME/.config/nvim
 ```
 
 Backup any configuration file that already exists (`.zshrc` and `.config/nvim`), then `cd` to the repository and `stow` the dotfiles to access the configuration.
@@ -56,7 +56,6 @@ exec zsh
 - `.config/ghostty/`, Ghostty terminal config (Nord theme, FiraCode Nerd Font).
 - `.config/nvim/`, [my config](https://github.com/LuckJMG/Neovim-Config) of nvim.
 - `.config/opencode/`, opencode config: agents, skills, commands, plugins.
-- `.config/wezterm/`, WezTerm config (WSL fallback).
 - `.gitconfig`, git configuration.
 - `.zshrc`, zsh configuration.
 - `lib/power-mode-manager/`, systemd service that auto-switches Ubuntu power profiles by charging state and battery level.

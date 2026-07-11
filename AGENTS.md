@@ -5,7 +5,7 @@ typecheck, or build commands exist. Verification = read-through + stow dry-run.
 
 ## Layout
 
-- Stow targets (symlink to `$HOME`): `.zshrc`, `.gitconfig`, `.config/ghostty/`, `.config/nvim/`, `.config/opencode/`, `.config/wezterm/`
+- Stow targets (symlink to `$HOME`): `.zshrc`, `.gitconfig`, `.config/ghostty/`, `.config/nvim/`, `.config/opencode/`
 - Submodule: `.config/nvim` → `github.com:LuckJMG/Neovim-Config`. Edit upstream, not here.
 - Manual install (NOT stowed — see `.stow-local-ignore` line `lib`):
   - `lib/power-mode-manager/` — Ubuntu systemd service, needs sudo
@@ -33,8 +33,6 @@ Backup `.zshrc` and `.config/nvim` first if they exist — `stow` will clobber.
   forks must edit before sourcing.
 - `lib/power-mode-manager/power-mode-manager.sh` hardcodes battery `BAT1`. Verify
   with `ls /sys/class/power_supply/` on non-default hardware.
-- Wezterm config sets `default_domain = "WSL:FedoraLinux-43"` (wezterm.lua:15) —
-  WSL-specific; harmless on Linux but will silently no-op in panes.
 - `.config/opencode/node_modules/` is git-ignored. Regenerate with
   `npm install` inside `.config/opencode/` if the symlink target is fresh.
 
