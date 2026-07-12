@@ -76,7 +76,3 @@ znap source zdharma-continuum/fast-syntax-highlighting
 
 # Exports
 export PATH=/home/luck/.opencode/bin:$PATH
-
-[ -s "/home/luck/.bun/_bun" ] && source "/home/luck/.bun/_bun"
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
