@@ -1,7 +1,6 @@
 ---
 description: Audit the whole repo for refactoring
 agent: plan
-model: minimax/MiniMax-M3
 ---
 
 # Refactor Audit
