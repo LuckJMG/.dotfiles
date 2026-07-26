@@ -1,5 +1,4 @@
-DOTFILES="$HOME/.dotfiles"
-LIB="$DOTFILES/lib"
+setopt no_beep
 
 # History
 HISTFILE=~/.zsh_history
@@ -34,18 +33,6 @@ bindkey -M viins '^?' backward-delete-char
 bindkey -M viins '^H' backward-delete-char
 bindkey -M vicmd 'k' history-search-backward
 bindkey -M vicmd 'j' history-search-forward
-
-# Integration
-if [[ "$TERM_PROGRAM" == "WezTerm" ]]; then
-	function wezterm_osc7() { print -Pn "\e]7;file://%m$PWD\e\\" }
-	function wezterm_semantic_precmd() { print -Pn "\e]133;A\e\\"; wezterm_osc7 }
-	function wezterm_semantic_preexec() { print -Pn "\e]133;C\e\\" }
-	autoload -Uz add-zsh-hook
-	add-zsh-hook precmd wezterm_semantic_precmd
-	add-zsh-hook preexec wezterm_semantic_preexec
-fi
-
-setopt no_beep
 
 # Plugins
 [[ -r ~/.config/zsh/znap/znap.zsh ]] ||
