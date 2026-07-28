@@ -5,10 +5,8 @@ agent: plan
 
 # Refactor Audit
 
-Audit a whole repository for refactoring opportunities, present them as a
-grouped report, and on selection emit self-contained instruction blocks
-another agent can execute. You never apply refactors yourself in this
-session — the output is a menu plus, on request, executable instructions.
+Audit a whole repository for refactoring opportunities and present them as a
+grouped report.
 
 ## Why this command exists
 
@@ -20,13 +18,12 @@ the work legible, and the instruction-block format lets the chosen refactors
 be handed off to a fresh agent session that has no audit context — so the
 audit and the application happen in separate, focused contexts.
 
-## The three phases
+## The phases
 
 Run them in order. Do not skip ahead.
 
 1. **Audit** — scan the whole repo, collect smells. No fixes.
 2. **Report** — group findings by category, number them, present to user.
-3. **Select** — user picks; for each pick, emit one instruction block.
 
 ---
 
@@ -101,9 +98,9 @@ selects, and the major number tells them which category at a glance.
 ### Finding line format
 
 One markdown table per category section. Each row is one finding. Keep
-cells concise — smell is a factual summary, fix is the direction (the full
-plan comes in Phase 3 if selected). Long cells wrap in the TUI; that's fine,
-but keep each cell to one logical line so the row stays scannable.
+cells concise — smell is a factual summary, fix is the direction. Long 
+cells wrap in the TUI; that's fine, but keep each cell to one logical line 
+so the row stays scannable.
 
 ```
 ## 1. extract
@@ -121,7 +118,7 @@ but keep each cell to one logical line so the row stays scannable.
 ```
 
 The smell is what's wrong (factual, not judgmental). The fix is the
-direction, not a full plan. Both stay short — the plan comes in Phase 3.
+direction, not a full plan.
 
 ### Report close
 
@@ -136,74 +133,8 @@ findings to justify the audit. A clean result is a valid outcome.
 
 ---
 
-## Phase 3: Select
-
-After the report, ask the user which refactors they want to proceed with:
-
-> Which refactors? Reply numbers (`1.1, 2.3, 3.1`), category (`all 1` or
-> `all extract`), or `none`.
-
-Wait for their reply. Do not assume a selection.
-
-### Instruction block format
-
-For each selected finding, emit one self-contained block. "Self-contained"
-is the critical property: another agent receiving only this block — with no
-audit report, no conversation history, no other blocks — must have
-everything it needs to execute the refactor. If a block references "the
-validation function from 2.1" or "as discussed above," it has failed.
-
-Use exactly this structure for each block:
-
-```
-## Refactor M.N: <short title>
-
-Target: <file:line range or symbol name>
-Action: <verb phrase — "Extract X into Y", "Move X from A to B", "Rename X to Y">
-Why: <the smell this fixes, one sentence>
-
-Before:
-  <minimal code snippet showing the current state — just enough to locate and recognize it>
-
-After:
-  <minimal code snippet showing the target state — the shape, not necessarily compilable pseudocode>
-
-Verify: <how to confirm it worked — a command, a test name, or a manual check>
-```
-
-### Why each field
-
-- **Target** — the executing agent needs to know what file and what region.
-  A line range is more robust than a symbol name if names are about to change.
-- **Action** — the verb phrase anchors the work. "Extract", "Move", "Rename",
-  "Inline", "Delete", "Replace" — each implies a known sequence of steps.
-- **Why** — without the why, the executing agent might "improve" the refactor
-  in a way that undoes the structural fix. The why constrains the change.
-- **Before / After** — the executing agent works from the *shape* of the
-  target, not from a diff against the current file (which may have shifted
-  by the time it runs). Keep snippets minimal — show the structure, not the
-  full implementation. Omit lines that don't illustrate the refactor.
-- **Verify** — a refactor with no check is unfinished. The check can be a
-  test command (`npm test -- orders`), a specific test name, or a manual
-  confirmation ("grep for processOrder — should return 0 hits"). Pick the
-  smallest check that fails if the refactor didn't happen or broke something.
-
-### If the user selects a category (`all extract`)
-
-Emit one block per finding in that category, in numbered order.
-
-### If the user replies `none`
-
-Stop. The report stands on its own.
-
----
-
 ## Boundaries
 
-- **Audit only in this session.** You never apply refactors here. The
-  instruction blocks are for another agent, another session. This separation
-  keeps the audit focused on *what* to change, and the application focused on
-  *how* to change it — two different modes of attention.
 - **No correctness, security, or performance findings.** Route those to a
   normal review. This skill is about structure, not behavior.
 - **No style nits without structural payoff.** A name that's unclear has
