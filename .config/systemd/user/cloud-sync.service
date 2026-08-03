@@ -1,0 +1,7 @@
+[Unit]
+Description=Google Drive Rclone Bidirectional Sync
+After=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/rclone bisync gdrive:/ %h/Cloud --drive-skip-shortcuts --drive-acknowledge-abuse --verbose
