@@ -61,3 +61,6 @@ mkcd() {
 }
 
 znap source zdharma-continuum/fast-syntax-highlighting
+
+# Exports
+export PATH="$HOME/Apps/Odin:$PATH"
