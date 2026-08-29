@@ -35,5 +35,7 @@ keybind = ctrl+shift+'=new_split:down
 keybind = ctrl+shift+1=goto_tab:1
 keybind = ctrl+shift+2=goto_tab:2
 keybind = ctrl+shift+3=goto_tab:3
-keybind = ctrl+shift+4=goto_tab:4
-keybind = ctrl+shift+5=goto_tab:5
+keybind = ctrl+h=goto_split:left
+keybind = ctrl+j=goto_split:down
+keybind = ctrl+k=goto_split:up
+keybind = ctrl+l=goto_split:right
