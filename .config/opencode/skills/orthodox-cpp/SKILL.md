@@ -37,6 +37,7 @@ Apply the following rules to generate code and review code.
 14. Do not use modules.
 15. If the current year is greater than or equal to the C++ standard year plus 5, use the functions of that standard.
 16. Use the functions of the C++20 standard.
+17. If structures relate to math like `vec3`, apply operator overloading.
 
 ## Base code example
 
