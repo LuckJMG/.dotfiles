@@ -1,0 +1,15 @@
+[Unit]
+Description=Rclone Bisync on Shutdown
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=true
+User=luck
+ExecStart=/bin/true
+ExecStop=/usr/bin/rclone bisync gdrive:/ /home/luck/Cloud/ --drive-skip-shortcuts --drive-acknowledge-abuse --verbose
+TimeoutStopSec=180
+
+[Install]
+WantedBy=multi-user.target
