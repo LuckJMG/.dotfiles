@@ -1,0 +1,11 @@
+[Unit]
+Description=Rclone Bisync on Login
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/rclone bisync gdrive:/ %h/Cloud/ --drive-skip-shortcuts --drive-acknowledge-abuse --verbose
+
+[Install]
+WantedBy=default.target
