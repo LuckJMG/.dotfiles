@@ -65,3 +65,6 @@ znap source zdharma-continuum/fast-syntax-highlighting
 
 # Exports
 export PATH="$HOME/Apps/Odin:$PATH"
+
+# opencode
+export PATH=/home/luck/.opencode/bin:$PATH
