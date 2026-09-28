@@ -62,3 +62,6 @@ mkcd() {
 }
 
 znap source zdharma-continuum/fast-syntax-highlighting
+
+# opencode
+export PATH=/home/luck/.opencode/bin:$PATH
