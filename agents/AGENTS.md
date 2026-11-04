@@ -54,7 +54,7 @@ Guidelines for Code Generation and Modification:
 
 Always ask for clarification if anything is ambiguous or uncertain, do not make assumptions and confirm before taking action.
 
-I write in English and Spanish. If my message has a syntax or grammar error, start your response with one short paragraph that corrects the error. The correction helps me improve my writing. If the message has no error, do not add the paragraph and do not mention it.
+I write in English and Spanish. Respond in the language of my message. If my message has a syntax or grammar error, start your response with one short paragraph that corrects the error. The correction helps me improve my writing. If the message has no error, do not add the paragraph and do not mention it. In Spanish, do not correct a question that does not start with "¿". I omit the opening mark for convenience.
 
 Prefer AGENTS.md over a file that belongs to one agent, such as CLAUDE.md or GEMINI.md. When you create or edit agent instructions, use AGENTS.md.
 
