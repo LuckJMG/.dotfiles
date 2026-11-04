@@ -57,11 +57,13 @@ alias tree="eza --tree --icons --level=3 --git-ignore"
 alias vim=nvim
 alias cloud-sync="rclone bisync gdrive:/ ~/Cloud --drive-skip-shortcuts --drive-acknowledge-abuse --verbose"
 alias jupyter="uv run --with jupyter jupyter lab"
+alias nvidia-kmod-check="$HOME/.dotfiles/lib/nvidia-kmod-check/nvidia-kmod-check.sh"
 mkcd() {
 	mkdir -p "$1" && cd "$1" || return
 }
 
 znap source zdharma-continuum/fast-syntax-highlighting
 
-# opencode
-export PATH=/home/luck/.opencode/bin:$PATH
+# >>> railway initialize >>>
+source "$HOME/.railway/env"
+# <<< railway initialize <<<
