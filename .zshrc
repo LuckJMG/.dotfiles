@@ -64,6 +64,7 @@ mkcd() {
 
 znap source zdharma-continuum/fast-syntax-highlighting
 
-# >>> railway initialize >>>
-source "$HOME/.railway/env"
-# <<< railway initialize <<<
+# Apps
+if [ -e "$HOME/railway/env" ]; then
+	source "$HOME/.railway/env"
+fi
