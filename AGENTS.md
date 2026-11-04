@@ -5,8 +5,11 @@ typecheck, or build commands exist. Verification = read-through + stow dry-run.
 
 ## Layout
 
-- Stow targets (symlink to `$HOME`): `.zshrc`, `.gitconfig`, `.config/ghostty/`, `.config/nvim/`, `.config/opencode/`
+- Stow targets (symlink to `$HOME`): `.zshrc`, `.gitconfig`, `.config/ghostty/`, `.config/nvim/`
 - Submodule: `.config/nvim` → `github.com:LuckJMG/Neovim-Config`. Edit upstream, not here.
+- `agents/` — shared agent config (`AGENTS.md`, `skills/`, `commands/`). NOT stowed
+  (`.stow-local-ignore`). Run `lib/link-agents.sh` (alias `link-agents`) to link it
+  into Claude and Antigravity.
 - Manual install (NOT stowed — see `.stow-local-ignore` line `lib`):
   - `lib/power-mode-manager/` — Ubuntu systemd service, needs sudo
   - `lib/gsync/` — systemd user services, needs `rclone` remote `gdrive:`
@@ -29,12 +32,10 @@ Backup `.zshrc` and `.config/nvim` first if they exist — `stow` will clobber.
   install commands are stale — use the actual path under `lib/`.
 - `lib/` is excluded from stow (`.stow-local-ignore`). Don't `stow lib/...` —
   follow each lib's own README to copy/symlink manually.
-- `.zshrc` hardcodes `/home/luck/.opencode/bin` and `$HOME/.bun`. User-specific;
+- `.zshrc` hardcodes `$HOME/.bun`. User-specific;
   forks must edit before sourcing.
 - `lib/power-mode-manager/power-mode-manager.sh` hardcodes battery `BAT1`. Verify
   with `ls /sys/class/power_supply/` on non-default hardware.
-- `.config/opencode/node_modules/` is git-ignored. Regenerate with
-  `npm install` inside `.config/opencode/` if the symlink target is fresh.
 
 ## Verify
 

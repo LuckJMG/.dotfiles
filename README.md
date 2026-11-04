@@ -54,7 +54,7 @@ exec zsh
 ## Project Structure
 - `.config/ghostty/`, Ghostty terminal config (Nord theme, FiraCode Nerd Font).
 - `.config/nvim/`, [my config](https://github.com/LuckJMG/Neovim-Config) of nvim.
-- `.config/opencode/`, opencode config: agents, skills, commands, plugins.
+- `agents/`, shared agent config (`AGENTS.md`, `skills/`, `commands/`) for Claude and Antigravity. Not stowed. Run `link-agents` (alias for `lib/link-agents.sh`) to link it.
 - `.gitconfig`, git configuration.
 - `.zshrc`, zsh configuration.
 - `lib/power-mode-manager/`, systemd service that auto-switches Ubuntu power profiles by charging state and battery level.

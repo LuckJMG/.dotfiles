@@ -2,7 +2,7 @@
 name: orthodox-cpp
 description: Write and review code in Orthodox C++. Orthodox C++ is a minimal subset of C++ that avoids Modern C++ features.
 license: MIT
-compatibility: opencode
+compatibility: claude-code
 metadata:
   audience: developers
   language: cpp

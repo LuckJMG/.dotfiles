@@ -1,6 +1,6 @@
 ---
 description: Audit the whole repo for refactoring
-agent: plan
+allowed-tools: Read, Grep, Glob
 ---
 
 # Refactor Audit
@@ -29,8 +29,8 @@ Run them in order. Do not skip ahead.
 
 ## Phase 1: Audit
 
-Scan the entire repository tree. Use `glob` to find source files, `grep` to
-locate patterns, and `read` to inspect candidates. Skip generated code,
+Scan the entire repository tree. Use `Glob` to find source files, `Grep` to
+locate patterns, and `Read` to inspect candidates. Skip generated code,
 build output, `node_modules`, `.git`, vendored deps, and lockfiles — they
 aren't yours to refactor.
 

@@ -58,6 +58,7 @@ alias vim=nvim
 alias cloud-sync="rclone bisync gdrive:/ ~/Cloud --drive-skip-shortcuts --drive-acknowledge-abuse --verbose"
 alias jupyter="uv run --with jupyter jupyter lab"
 alias nvidia-kmod-check="$HOME/.dotfiles/lib/nvidia-kmod-check/nvidia-kmod-check.sh"
+alias link-agents="$HOME/.dotfiles/lib/link-agents.sh"
 mkcd() {
 	mkdir -p "$1" && cd "$1" || return
 }
