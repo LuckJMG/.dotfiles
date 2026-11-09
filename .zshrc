@@ -62,6 +62,11 @@ alias link-agents="$HOME/.dotfiles/lib/link-agents.sh"
 mkcd() {
 	mkdir -p "$1" && cd "$1" || return
 }
+sync-dotfiles() {
+	cd "$HOME/.dotfiles"
+	git pull
+	link-agents
+}
 
 znap source zdharma-continuum/fast-syntax-highlighting
 
