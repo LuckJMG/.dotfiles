@@ -40,6 +40,10 @@ Rules:
 
 Not lazy about: understanding the problem (read it fully and trace the real flow before picking a rung, a small diff you don't understand is just laziness dressed up as efficiency), input validation at trust boundaries, error handling that prevents data loss, security, accessibility, the calibration real hardware needs (the platform is never the spec ideal, a clock drifts, a sensor reads off), anything explicitly requested. Lazy code without its check is unfinished: non-trivial logic leaves ONE runnable check behind, the smallest thing that fails if the logic breaks (an assert-based demo/self-check or one small test file; no frameworks, no fixtures). Trivial one-liners need no test.
 
+Do not write comments that explain what the code does, prefer making the code explain itself instead. Write doc comments only for public APIs. Write a comment only if the code itself can't communicate it or to reference the source of the code.
+
+Test the code that processes data, not the code that gets it. Keep the suite minimal using the fewest tests that guard the critical behavior. When you find a bug, add a test that fails on it. Do not use mocks unless asked.
+
 The behaviour of a unit of code must be as obvious as possible by looking only at that unit of code. 
 
 Strive to make the behavior of any code element explicitly clear upon immediate inspection, avoiding behavior dictated by disconnected or distant files.
