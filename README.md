@@ -28,6 +28,20 @@ Personal development environment configuration for Linux.
 - [tealdeer](https://github.com/tealdeer-rs/tealdeer): Very fast implementation of tldr in Rust.
 - [zoxide](https://github.com/ajeetdsouza/zoxide): A smarter cd command.
 
+## Agent Skills
+
+Skills live in `agents/skills/`. Run `link-agents` to link them into Claude and Antigravity.
+
+- `audit`: Scan code for one kind of problem, report, then apply the approved findings.
+- `data-storytelling`: Rules to communicate with data, based on "Storytelling with Data".
+- `document-writing`: Writing rules for finished documents such as reports, essays, and theses.
+- `git-commit`: Commit with conventional commit messages and intelligent staging.
+- `just`: Reference for the `just` command runner.
+- `orthodox-cpp`: Write and review code in Orthodox C++, a minimal subset of C++.
+- `ponytail`: Force the laziest solution that works: simplest, shortest, most minimal.
+- `project-docs`: Write project docs from [The Good Docs Project](https://gitlab.com/tgdp/templates) templates (git submodule).
+- `simple-english`: Write technical text with the ASD-STE100 Simplified Technical English rules.
+
 ## Installation
 
 Clone this repo on `$HOME/.dotfiles` and [nvim config](https://github.com/LuckJMG/Neovim-Config).

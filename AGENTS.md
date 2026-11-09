@@ -10,6 +10,8 @@ typecheck, or build commands exist. Verification = read-through + stow dry-run.
 - `agents/` — shared agent config (`AGENTS.md`, `skills/`, `commands/`). NOT stowed
   (`.stow-local-ignore`). Run `lib/link-agents.sh` (alias `link-agents`) to link it
   into Claude and Antigravity.
+- Submodule: `agents/skills/project-docs/templates` → `gitlab.com/tgdp/templates`
+  (Good Docs Project templates). Do not edit; update with `git submodule update --remote`.
 - Manual install (NOT stowed — see `.stow-local-ignore` line `lib`):
   - `lib/power-mode-manager/` — Ubuntu systemd service, needs sudo
   - `lib/gsync/` — systemd user services, needs `rclone` remote `gdrive:`

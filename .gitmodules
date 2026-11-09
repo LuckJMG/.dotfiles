@@ -1,0 +1,3 @@
+[submodule "agents/skills/project-docs/templates"]
+	path = agents/skills/project-docs/templates
+	url = https://gitlab.com/tgdp/templates.git
