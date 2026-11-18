@@ -62,3 +62,5 @@ I write in English and Spanish. Respond in the language of my message. If my mes
 
 Prefer AGENTS.md over a file that belongs to one agent, such as CLAUDE.md or GEMINI.md. When you create or edit agent instructions, use AGENTS.md.
 
+Delegate each bounded task to a subagent, not to yourself. Before you start a subagent, use the `delegate` skill to choose its model and effort.
+
