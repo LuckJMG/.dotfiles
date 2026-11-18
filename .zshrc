@@ -42,6 +42,7 @@ source ~/.config/zsh/znap/znap.zsh
 
 znap prompt sindresorhus/pure
 znap source zsh-users/zsh-autosuggestions
+export _ZO_DOCTOR=0
 eval "$(zoxide init --cmd cd zsh)"
 
 znap eval fzf "fzf --zsh"
@@ -70,7 +71,3 @@ sync-dotfiles() {
 
 znap source zdharma-continuum/fast-syntax-highlighting
 
-# Apps
-if [ -e "$HOME/railway/env" ]; then
-	source "$HOME/.railway/env"
-fi
