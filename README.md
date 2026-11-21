@@ -71,6 +71,5 @@ exec zsh
 - `agents/`, shared agent config (`AGENTS.md`, `skills/`, `commands/`) for Claude and Antigravity. Not stowed. Run `link-agents` (alias for `lib/link-agents.sh`) to link it.
 - `.gitconfig`, git configuration.
 - `.zshrc`, zsh configuration.
-- `lib/power-mode-manager/`, systemd service that auto-switches Ubuntu power profiles by charging state and battery level.
 
 **Note:** This is my personal setup. Feel free to fork and adapt it to your needs.
