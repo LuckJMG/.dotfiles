@@ -12,3 +12,4 @@ Brewfile
 
 
 ^/agents
+.*\.zwc
